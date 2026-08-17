@@ -48,7 +48,7 @@ class _RemoteControlScreenState extends State<RemoteControlScreen> with SingleTi
   final String _batScriptContent = r'''@echo off
 title serveur local
 echo lancement du serveur sur le port 55555...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "$listener = [System.Net.Sockets.TcpListener]55555; $listener.Start(); while ($true) { $client = $listener.AcceptTcpClient(); $stream = $client.GetStream(); $reader = New-Object System.IO.StreamReader($stream); $writer = New-Object System.IO.StreamWriter($stream); $writer.AutoFlush = $true; $writer.WriteLine('connecté au pc windows'); while ($client.Connected) { $cmd = $reader.ReadLine(); if ($cmd -eq $null) { break }; try { $out = Invoke-Expression $cmd 2>&1 | Out-String; if ([string]::IsNullOrWhiteSpace($out)) { $out = 'commande exécutée sans retour.' }; $writer.WriteLine($out); } catch { $writer.WriteLine('erreur: ' + $_.Exception.Message); } } $client.Close(); }"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$listener = [System.Net.Sockets.TcpListener]55555; $listener.Start(); while ($true) { $client = $listener.AcceptTcpClient(); $stream = $client.GetStream(); $reader = New-Object System.IO.StreamReader($stream); $writer = New-Object System.IO.StreamWriter($stream); $writer.AutoFlush = $true; $writer.WriteLine('connecter au windows'); while ($client.Connected) { $cmd = $reader.ReadLine(); if ($cmd -eq $null) { break }; try { $out = Invoke-Expression $cmd 2>&1 | Out-String; if ([string]::IsNullOrWhiteSpace($out)) { $out = 'commande executer sans retour.' }; $writer.WriteLine($out); } catch { $writer.WriteLine('erreur: ' + $_.Exception.Message); } } $client.Close(); }"
 pause''';
 
   @override
@@ -133,7 +133,7 @@ pause''';
     setState(() {
       _isLoading = true;
     });
-    _addLog("connexion à $ip:$port...");
+    _addLog("connexion a $ip:$port...");
 
     try {
       _socket = await Socket.connect(ip, port, timeout: const Duration(seconds: 4));
@@ -142,7 +142,7 @@ pause''';
         _isConnected = true;
         _isLoading = false;
       });
-      _addLog("connexion établie");
+      _addLog("connexion etablie");
 
       _socket!.listen(
         (List<int> data) {
@@ -150,7 +150,7 @@ pause''';
           _addLog(response);
         },
         onError: (error) {
-          _addLog("erreur réseau : $error", isError: true);
+          _addLog("erreur reseau : $error", isError: true);
           _disconnect();
         },
         onDone: () {
@@ -163,7 +163,7 @@ pause''';
         _isLoading = false;
         _isConnected = false;
       });
-      _addLog("échec : cible introuvable ($e)", isError: true);
+      _addLog("echec : cible introuvable ($e)", isError: true);
     }
   }
 
@@ -176,7 +176,7 @@ pause''';
       _isConnected = false;
       _isLoading = false;
     });
-    _addLog("déconnecté");
+    _addLog("deconnecter");
   }
 
   void _handleCommandExecution() {
@@ -186,7 +186,7 @@ pause''';
     _commandController.clear();
 
     if (_socket == null) {
-      _addLog("erreur : aucun appareil connecté", isError: true);
+      _addLog("erreur : aucun appareil connecter", isError: true);
       return;
     }
     try {
