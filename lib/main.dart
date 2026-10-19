@@ -1269,7 +1269,6 @@ class AndroidHelpView extends StatelessWidget {
     );
   }
 }
-
 class ContactView extends StatefulWidget {
   final String currentLang;
   const ContactView({super.key, required this.currentLang});
