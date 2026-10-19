@@ -33,9 +33,9 @@ class AppTranslations {
       'maj_title': 'M.A.J. & News',
       'v1_title': 'Version 1.0.0',
       'v1_desc': '- Modification du bouton de connexion.\n- Ajout édition pour le script server.bat .',
-      'v2_title': 'Version 1.0.1',
-      'v2_desc': '- Nouvelles langues disponibles dans la version 1.0.2.',
-      'v3_title': 'Version 1.0.2 | News',
+      'v2_title': 'Version 1.0.1 / News',
+      'v2_desc': '- Nouvelles langues bientôt disponibles: (anglais, allemand, portugais).',
+      'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Ajout du système multilingue.\n- Console adaptative et popup de récupération .bat.',
       'retrieval_title': 'Comment recuperer le fichier ?',
       'retrieval_content': 'Voici des sites gratuits sans inscription pour partager et recuperer votre script .bat sur Windows :\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
@@ -61,10 +61,11 @@ class AppTranslations {
       'step2_droid_desc': 'Ouvrez votre application de terminal Android (Termux) puis saisissez l\'instruction suivante pour ouvrir le canal réseau interne :\nnc -l -p 55555',
       'step3_droid': 'Étape 3 : verifier l ip reseau de l appareil',
       'step3_droid_desc': 'Allez dans Paramètres Android -> À propos du téléphone -> Statut (ou Infos d\'état) -> Adresse IP.\n\nTant que l\'appareil reste connecté au même réseau Wi-Fi local que cet appareil Android, la liaison s\'effectuera directement via cette IP.',
-      'contact1': 'Vous avez une idée de mise a jour ?',
-      'contact1_desc': '- Rendez vous dans la partie commentaires sur le site ou vous avez télécharger l appli.',
-      'contact2': 'Vous rencontrez un bug ?',
-      'contact2_desc': '- Rendez vous dans la partie commentaires sur le site ou vous avez télécharger l appli.',
+      'contact_title': 'Envoyer un commentaire ou signaler un problème',
+      'contact_hint': 'Tapez votre message ici...',
+      'contact_send': 'Envoyer le message',
+      'contact_success': 'Message envoyé avec succès !',
+      'contact_error': 'Erreur lors de l\'envoi du message.',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -90,9 +91,9 @@ class AppTranslations {
       'maj_title': 'Updates & News',
       'v1_title': 'Version 1.0.0',
       'v1_desc': '- Updated connection button.\n- Added server.bat script editor.',
-      'v2_title': 'Version 1.0.1',
-      'v2_desc': '- New languages available in version 1.0.2.',
-      'v3_title': 'Version 1.0.2 | News',
+      'v2_title': 'Version 1.0.1 / News',
+      'v2_desc': '- New languages coming soon: (English, German, Portuguese).',
+      'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Added multilingual system.\n- Adaptive console and .bat retrieval popup.',
       'retrieval_title': 'How to retrieve file?',
       'retrieval_content': 'Here are free no-login sites to share and retrieve your .bat script on Windows:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
@@ -118,10 +119,11 @@ class AppTranslations {
       'step2_droid_desc': 'Run: nc -l -p 55555',
       'step3_droid': 'Step 3: check network IP',
       'step3_droid_desc': 'Check device IP in Android settings.',
-      'contact1': 'Got an update idea?',
-      'contact1_desc': '- Visit comments section on download page.',
-      'contact2': 'Encountering a bug?',
-      'contact2_desc': '- Visit comments section on download page.',
+      'contact_title': 'Send a comment or report an issue',
+      'contact_hint': 'Type your message here...',
+      'contact_send': 'Send message',
+      'contact_success': 'Message sent successfully!',
+      'contact_error': 'Error sending message.',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -148,7 +150,7 @@ class AppTranslations {
       'v1_title': 'Versión 1.0.0',
       'v1_desc': '- Botón de conexión actualizado.',
       'v2_title': 'Versión 1.0.1 / News',
-      'v2_desc': '- Nuevos idiomas disponibles en la versión 1.0.2.',
+      'v2_desc': '- Nuevos idiomas próximamente.',
       'v3_title': 'Versión 1.0.2 / News',
       'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa y popup de recuperación .bat.',
       'retrieval_title': '¿Cómo recuperar archivo?',
@@ -175,10 +177,11 @@ class AppTranslations {
       'step2_droid_desc': 'Ejecutar comando.',
       'step3_droid': 'Paso 3: IP',
       'step3_droid_desc': 'Ver ajustes Wi-Fi.',
-      'contact1': '¿Idea de actualización?',
-      'contact1_desc': '- Ver comentarios.',
-      'contact2': '¿Bug?',
-      'contact2_desc': '- Ver comentarios.',
+      'contact_title': 'Enviar un comentario o reportar un problema',
+      'contact_hint': 'Escribe tu mensaje aquí...',
+      'contact_send': 'Enviar mensaje',
+      'contact_success': '¡Mensaje enviado con éxito!',
+      'contact_error': 'Error al enviar el mensaje.',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -205,8 +208,8 @@ class AppTranslations {
       'v1_title': 'Version 1.0.0',
       'v1_desc': '- Aktualisiert.',
       'v2_title': 'Version 1.0.1',
-      'v2_desc': '- Neue Sprachen in Version 1.0.2 verfügbar.',
-      'v3_title': 'Version 1.0.2 | News',
+      'v2_desc': '- Neue Sprachen bald verfügbar.',
+      'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Mehrsprachiges System hinzugefügt.\n- Adaptive Konsole und .bat-Abruf-Popup.',
       'retrieval_title': 'Datei abrufen?',
       'retrieval_content': 'Kostenlose Dienste:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
@@ -232,10 +235,11 @@ class AppTranslations {
       'step2_droid_desc': 'nc -l -p 55555',
       'step3_droid': 'Schritt 3: IP',
       'step3_droid_desc': 'Prüfen.',
-      'contact1': 'Idee?',
-      'contact1_desc': '- Kommentare.',
-      'contact2': 'Bug?',
-      'contact2_desc': '- Kommentare.',
+      'contact_title': 'Kommentar senden oder Problem melden',
+      'contact_hint': 'Geben Sie Ihre Nachricht hier ein...',
+      'contact_send': 'Nachricht senden',
+      'contact_success': 'Nachricht erfolgreich gesendet!',
+      'contact_error': 'Fehler beim Senden der Nachricht.',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -262,8 +266,8 @@ class AppTranslations {
       'v1_title': 'Versão 1.0.0',
       'v1_desc': '- Atualizado.',
       'v2_title': 'Versão 1.0.1',
-      'v2_desc': '- Novos idiomas disponíveis na versão 1.0.2.',
-      'v3_title': 'Versão 1.0.2 | News',
+      'v2_desc': '- Novos idiomas em breve.',
+      'v3_title': 'Versão 1.0.2 / News',
       'v3_desc': '- Adicionado sistema multilíngue.\n- Console adaptativa e popup de recuperação .bat.',
       'retrieval_title': 'Como recuperar arquivo?',
       'retrieval_content': 'Sites gratuitos:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
@@ -289,15 +293,31 @@ class AppTranslations {
       'step2_droid_desc': 'nc -l -p 55555',
       'step3_droid': 'Passo 3: IP',
       'step3_droid_desc': 'Verificar.',
-      'contact1': 'Ideia?',
-      'contact1_desc': '- Comentários.',
-      'contact2': 'Bug?',
-      'contact2_desc': '- Comentários.',
+      'contact_title': 'Enviar comentário ou relatar problema',
+      'contact_hint': 'Digite sua mensagem aqui...',
+      'contact_send': 'Enviar mensagem',
+      'contact_success': 'Mensagem enviada com sucesso!',
+      'contact_error': 'Erro ao enviar mensagem.',
     }
   };
 
   static String get(String key, String lang) {
     return localizedValues[lang]?[key] ?? localizedValues['fr']?[key] ?? key;
+  }
+}
+
+Future<bool> sendDiscordWebhook(String text) async {
+  const webhookUrl = 'https://discord.com/api/webhooks/1561734170127114240/4AiY3UENI5cki92nQ22ntTq7j1uvmZ_tRRoFMO9M3XFnM24uX2P6MsCwL_GF4QqJtASD';
+  try {
+    final client = HttpClient();
+    final request = await client.postUrl(Uri.parse(webhookUrl));
+    request.headers.set('content-type', 'application/json');
+    request.add(utf8.encode(jsonEncode({'content': text})));
+    final response = await request.close();
+    client.close();
+    return response.statusCode >= 200 && response.statusCode < 300;
+  } catch (_) {
+    return false;
   }
 }
 
@@ -570,11 +590,11 @@ pause''';
                 dropdownColor: const Color(0xFF111111),
                 icon: const Icon(Icons.language, color: Color(0xFFFF0000), size: 18),
                 items: const [
-                  DropdownMenuItem(value: 'fr', child: Text('🇫🇷FR', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'en', child: Text('🇺🇸EN', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'es', child: Text('🇪🇸ES', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'de', child: Text('🇩🇪DE', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'pt', child: Text('🇵🇹PT', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'fr', child: Text('FR', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'en', child: Text('EN', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'es', child: Text('ES', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'de', child: Text('DE', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'pt', child: Text('PT', style: TextStyle(color: Colors.white, fontSize: 12))),
                 ],
                 onChanged: (val) {
                   if (val != null) widget.onLangChanged(val);
@@ -1250,19 +1270,120 @@ class AndroidHelpView extends StatelessWidget {
   }
 }
 
-class ContactView extends StatelessWidget {
+class ContactView extends StatefulWidget {
   final String currentLang;
   const ContactView({super.key, required this.currentLang});
 
-  String tr(String key) => AppTranslations.get(key, currentLang);
+  @override
+  State<ContactView> createState() => _ContactViewState();
+}
+
+class _ContactViewState extends State<ContactView> {
+  final TextEditingController _contactController = TextEditingController();
+  bool _isSending = false;
+
+  @override
+  void dispose() {
+    _contactController.dispose();
+    super.dispose();
+  }
+
+  String tr(String key) => AppTranslations.get(key, widget.currentLang);
+
+  void _sendContactMessage() async {
+    final text = _contactController.text.trim();
+    if (text.isEmpty) return;
+
+    setState(() {
+      _isSending = true;
+    });
+
+    final success = await sendDiscordWebhook(text);
+
+    if (!mounted) return;
+
+    setState(() {
+      _isSending = false;
+    });
+
+    if (success) {
+      _contactController.clear();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(tr('contact_success')),
+          backgroundColor: Colors.green,
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(tr('contact_error')),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        HelpStepToggle(title: tr('contact1'), content: tr('contact1_desc')),
-        HelpStepToggle(title: tr('contact2'), content: tr('contact2_desc')),
+        Text(
+          tr('contact_title'),
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            fontFamily: "monospace",
+          ),
+        ),
+        const SizedBox(height: 12),
+        TextField(
+          controller: _contactController,
+          maxLines: 5,
+          style: const TextStyle(color: Colors.white, fontSize: 13, fontFamily: "monospace"),
+          decoration: InputDecoration(
+            hintText: tr('contact_hint'),
+            hintStyle: const TextStyle(color: Colors.white24, fontSize: 13),
+            filled: true,
+            fillColor: const Color(0xFF050505),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(4),
+              borderSide: const BorderSide(color: Colors.white10),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(4),
+              borderSide: const BorderSide(color: Color(0xFFFF0000)),
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        SizedBox(
+          height: 48,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFFF0000),
+              foregroundColor: Colors.black,
+              elevation: 0,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+            ),
+            onPressed: _isSending ? null : _sendContactMessage,
+            child: _isSending
+                ? const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                      strokeWidth: 2,
+                    ),
+                  )
+                : Text(
+                    tr('contact_send'),
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  ),
+          ),
+        ),
       ],
     );
   }
