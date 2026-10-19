@@ -1,6 +1,6 @@
 name: remote_control
 description: Application iOS de controle a distance pour PC en local.
-version: 1.0.2
+version: 1.0.1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
