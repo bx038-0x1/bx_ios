@@ -40,7 +40,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Contrôle interactif du serveur HTTP (Démarrer/Arrêter) et gestion des permissions.',
+      'v5_desc': '- Gestion automatique du serveur HTTP et vérification des permissions.',
       'step1_win': 'Étape 1 : creer un dossier securisé',
       'step1_win_desc': 'Pour éviter que Windows Defender ou votre pare-feu bloque l\'application, évitez le dossier /Downloads.\n\nCréez un dossier neuf à la racine de votre système, par exemple : C:\\BXRemote.',
       'step2_win': 'Étape 2 : autorisations du dossier',
@@ -93,8 +93,6 @@ class AppTranslations {
       'server_inactive': 'Serveur Inactif',
       'network_ips': 'Adresses IP détectées :',
       'cmd_to_run': 'Commande Windows (CMD / PowerShell) :',
-      'start_server': 'Démarrer',
-      'stop_server': 'Arrêter',
       'close': 'Fermer',
       'perm_dialog_title': 'Permissions requises',
       'perm_dialog_content': 'BX Remote a besoin des accès au réseau local et au Wi-Fi pour communiquer avec vos machines.',
@@ -131,7 +129,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support for multiple ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Interactive HTTP server control (Start/Stop) and permissions.',
+      'v5_desc': '- Automatic HTTP server management and permission check.',
       'step1_win': 'Step 1: create a secure folder',
       'step1_win_desc': 'To avoid Windows Defender or firewall blocking, avoid the /Downloads folder.\n\nCreate a new folder at system root, e.g., C:\\BXRemote.',
       'step2_win': 'Step 2: folder permissions',
@@ -184,8 +182,6 @@ class AppTranslations {
       'server_inactive': 'Server Inactive',
       'network_ips': 'Detected IP Addresses:',
       'cmd_to_run': 'Windows Command (CMD / PowerShell):',
-      'start_server': 'Start',
-      'stop_server': 'Stop',
       'close': 'Close',
       'perm_dialog_title': 'Required Permissions',
       'perm_dialog_content': 'BX Remote requires local network and Wi-Fi access to communicate with your machines.',
@@ -222,7 +218,7 @@ class AppTranslations {
       'v4_title': 'Versión 1.0.3 / News',
       'v4_desc': '- Soporte para múltiples puertos.',
       'v5_title': 'Versión 1.0.4 / News',
-      'v5_desc': '- Control interactivo del servidor HTTP.',
+      'v5_desc': '- Gestión automática del servidor HTTP.',
       'step1_win': 'Paso 1: carpeta segura',
       'step1_win_desc': 'Evite /Downloads. Cree C:\\BXRemote.',
       'step2_win': 'Paso 2: permisos',
@@ -275,8 +271,6 @@ class AppTranslations {
       'server_inactive': 'Servidor Inactivo',
       'network_ips': 'Direcciones IP detectadas:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
-      'start_server': 'Iniciar',
-      'stop_server': 'Detener',
       'close': 'Cerrar',
       'perm_dialog_title': 'Permisos requeridos',
       'perm_dialog_content': 'BX Remote necesita acceso a la red local y Wi-Fi.',
@@ -313,7 +307,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Unterstützung für mehrere Ports.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Interaktive HTTP-Server-Steuerung.',
+      'v5_desc': '- Automatische HTTP-Server-Verwaltung.',
       'step1_win': 'Schritt 1: Ordner',
       'step1_win_desc': 'C:\\BXRemote erstellen.',
       'step2_win': 'Schritt 2: Rechte',
@@ -366,8 +360,6 @@ class AppTranslations {
       'server_inactive': 'Server Inaktiv',
       'network_ips': 'Erkannte IP-Adressen:',
       'cmd_to_run': 'Windows-Befehl (CMD / PowerShell):',
-      'start_server': 'Starten',
-      'stop_server': 'Stoppen',
       'close': 'Schließen',
       'perm_dialog_title': 'Erforderliche Berechtigungen',
       'perm_dialog_content': 'BX Remote benötigt Netzwerk- und WLAN-Zugriff.',
@@ -404,7 +396,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Suporte para múltiplas portas.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Controle interativo do servidor HTTP.',
+      'v5_desc': '- Gerenciamento automático do servidor HTTP.',
       'step1_win': 'Passo 1: Pasta',
       'step1_win_desc': 'Criar C:\\BXRemote.',
       'step2_win': 'Passo 2: Permissões',
@@ -457,8 +449,6 @@ class AppTranslations {
       'server_inactive': 'Servidor Inativo',
       'network_ips': 'Endereços IP detectados:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
-      'start_server': 'Iniciar',
-      'stop_server': 'Parar',
       'close': 'Fechar',
       'perm_dialog_title': 'Permissões necessárias',
       'perm_dialog_content': 'BX Remote precisa de acesso à rede local e Wi-Fi.',
@@ -1613,7 +1603,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
   @override
   void dispose() {
     _scriptController.dispose();
-    _stopHttpServer(null);
+    _stopHttpServer();
     super.dispose();
   }
 
@@ -1637,7 +1627,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
     }
   }
 
-  Future<void> _startHttpServer(StateSetter? setStateModal) async {
+  Future<void> _startHttpServer() async {
     if (_isServerRunning) return;
     try {
       _httpServer = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
@@ -1649,29 +1639,26 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
       setState(() {
         _isServerRunning = true;
       });
-      setStateModal?.call(() {});
     } catch (e) {
       setState(() {
         _isServerRunning = false;
       });
-      setStateModal?.call(() {});
     }
   }
 
-  void _stopHttpServer(StateSetter? setStateModal) {
+  void _stopHttpServer() {
     _httpServer?.close();
     _httpServer = null;
     if (mounted) {
       setState(() {
         _isServerRunning = false;
       });
-      setStateModal?.call(() {});
     }
   }
 
   void _showHostingDialog(BuildContext context) async {
     await _detectNetworkIps();
-    await _startHttpServer(null);
+    await _startHttpServer();
 
     if (!mounted) return;
 
@@ -1775,28 +1762,15 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
               actions: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _isServerRunning ? Colors.redAccent : const Color(0xFFFF0000),
+                    backgroundColor: const Color(0xFFFF0000),
                     foregroundColor: Colors.black,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                   ),
                   onPressed: () {
-                    if (_isServerRunning) {
-                      _stopHttpServer(setStateModal);
-                    } else {
-                      _startHttpServer(setStateModal);
-                    }
-                  },
-                  child: Text(
-                    _isServerRunning ? tr('stop_server') : tr('start_server'),
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace"),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    _stopHttpServer(null);
+                    _stopHttpServer();
                     Navigator.pop(context);
                   },
-                  child: Text(tr('close'), style: const TextStyle(color: Colors.white38, fontFamily: "monospace")),
+                  child: Text(tr('close'), style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace")),
                 ),
               ],
             );
