@@ -38,6 +38,8 @@ class AppTranslations {
       'v2_desc': '- Nouvelles langues bientôt disponibles: (anglais, allemand, portugais).',
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Ajout du système multilingue.\n- Console adaptative et popup de récupération .bat.',
+      'v4_title': 'Version 1.0.3 / News',
+      'v4_desc': '- Support de multiples ports de connexion (80, 443, 2222, etc.).\n- Système de signalement par sujet (Erreur, Bug, Proposition, Avis).',
       'retrieval_title': 'Comment recuperer le fichier ?',
       'retrieval_content': 'Voici des sites gratuits sans inscription pour partager et recuperer votre script .bat sur Windows :\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Étape 1 : creer un dossier securisé',
@@ -47,7 +49,7 @@ class AppTranslations {
       'step3_win': 'Étape 3 : deploiement du script .bat',
       'step3_win_desc': '1. Copiez le script .bat depuis l\'application.\n2. Dans votre dossier sécurisé, créez un document texte nommé \'serveur.bat\'.\n3. Collez le code dedans et sauvegardez.\n4. Double-cliquez pour exécuter l\'écouteur sur le port 55555.',
       'step4_win': 'Étape 4 : recuperer l adresse ip locale',
-      'step4_win_desc': 'Ouvrez l\'invite de commande (cmd) sur votre PC, tapez \'ipconfig\' et repérez la ligne \'Adresse IPv4\' (ex: 192.168.1.35).\n\nEntrez cette IP et le port 55555 dans l\'application pour initier la liaison.',
+      'step4_win_desc': 'Ouvrez l\'invite de commande (cmd) sur votre PC, tapez \'ipconfig\' et repérez la ligne \'Adresse IPv4\' (ex: 192.168.1.35).\n\nEnterez cette IP et le port dans l\'application pour initier la liaison.',
       'step1_mac': 'Étape 1 : configurer un repertoire isole',
       'step1_mac_desc': 'macOS restreint l\'activité réseau brute dans le dossier Téléchargements standard.\n\nOuvrez votre Finder et créez un dossier isolé dans votre dossier utilisateur (ex: /Utilisateurs/votre-nom/BXConsole).',
       'step2_mac': 'Étape 2 : demarrer l ecoute reseau',
@@ -62,7 +64,12 @@ class AppTranslations {
       'step2_droid_desc': 'Ouvrez votre application de terminal Android (Termux) puis saisissez l\'instruction suivante pour ouvrir le canal réseau interne :\nnc -l -p 55555',
       'step3_droid': 'Étape 3 : verifier l ip reseau de l appareil',
       'step3_droid_desc': 'Allez dans Paramètres Android -> À propos du téléphone -> Statut (ou Infos d\'état) -> Adresse IP.\n\nTant que l\'appareil reste connecté au même réseau Wi-Fi local que cet appareil Android, la liaison s\'effectuera directement via cette IP.',
-      'contact_title': 'Envoyer un commentaire ou signaler un problème',
+      'select_subject_title': 'Choisir le sujet du message',
+      'subject_error': 'Erreur',
+      'subject_bug': 'Bug',
+      'subject_update': 'Proposition update',
+      'subject_review': 'Avis',
+      'contact_title': 'Envoyer un message',
       'contact_hint': 'Tapez votre message ici...',
       'contact_send': 'Envoyer le message',
       'contact_success': 'Message envoyé avec succès !',
@@ -71,6 +78,7 @@ class AppTranslations {
       'privacy_content': 'En utilisant BX Remote, vous acceptez les conditions suivantes :\n\n1. L\'application utilise le réseau local pour transmettre vos commandes à votre ordinateur.\n2. Aucune donnée personnelle n\'est collectée ni revendue.\n3. Vous êtes seul responsable des commandes exécutées sur votre machine cible.',
       'privacy_accept': 'J\'accepte',
       'privacy_refuse': 'Quitter',
+      'select_port': 'Choisir un port rapide',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -99,6 +107,8 @@ class AppTranslations {
       'v2_desc': '- New languages coming soon: (English, German, Portuguese).',
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Added multilingual system.\n- Adaptive console and .bat retrieval popup.',
+      'v4_title': 'Version 1.0.3 / News',
+      'v4_desc': '- Support for multiple connection ports (80, 443, 2222, etc.).\n- Subject-based reporting system (Error, Bug, Proposal, Review).',
       'retrieval_title': 'How to retrieve file?',
       'retrieval_content': 'Here are free no-login sites to share and retrieve your .bat script on Windows:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Step 1: create a secure folder',
@@ -108,7 +118,7 @@ class AppTranslations {
       'step3_win': 'Step 3: deploy .bat script',
       'step3_win_desc': '1. Copy bat script.\n2. Create server.bat in your secure folder.\n3. Paste code and save.\n4. Double click to run listener on port 55555.',
       'step4_win': 'Step 4: retrieve local IP',
-      'step4_win_desc': 'Open cmd, type \'ipconfig\' and find IPv4 Address (e.g. 192.168.1.35).\n\nEnter this IP and port 55555.',
+      'step4_win_desc': 'Open cmd, type \'ipconfig\' and find IPv4 Address (e.g. 192.168.1.35).\n\nEnter this IP and port.',
       'step1_mac': 'Step 1: isolated directory',
       'step1_mac_desc': 'macOS restricts raw network activity in Downloads.\n\nCreate an isolated folder in user directory.',
       'step2_mac': 'Step 2: start network listener',
@@ -123,7 +133,12 @@ class AppTranslations {
       'step2_droid_desc': 'Run: nc -l -p 55555',
       'step3_droid': 'Step 3: check network IP',
       'step3_droid_desc': 'Check device IP in Android settings.',
-      'contact_title': 'Send a comment or report an issue',
+      'select_subject_title': 'Select message subject',
+      'subject_error': 'Error',
+      'subject_bug': 'Bug',
+      'subject_update': 'Update proposal',
+      'subject_review': 'Review',
+      'contact_title': 'Send a message',
       'contact_hint': 'Type your message here...',
       'contact_send': 'Send message',
       'contact_success': 'Message sent successfully!',
@@ -132,6 +147,7 @@ class AppTranslations {
       'privacy_content': 'By using BX Remote, you agree to the following terms:\n\n1. The app uses local network to transmit commands to your PC.\n2. No personal data is collected or sold.\n3. You are solely responsible for commands executed on your target machine.',
       'privacy_accept': 'I Accept',
       'privacy_refuse': 'Exit',
+      'select_port': 'Select quick port',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -160,6 +176,8 @@ class AppTranslations {
       'v2_desc': '- Nuevos idiomas próximamente.',
       'v3_title': 'Versión 1.0.2 / News',
       'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa y popup de recuperación .bat.',
+      'v4_title': 'Versión 1.0.3 / News',
+      'v4_desc': '- Soporte para múltiples puertos (80, 443, 2222, etc.).\n- Sistema de reporte por temas.',
       'retrieval_title': '¿Cómo recuperar archivo?',
       'retrieval_content': 'Sitios gratuitos sin registro:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Paso 1: carpeta segura',
@@ -184,7 +202,12 @@ class AppTranslations {
       'step2_droid_desc': 'Ejecutar comando.',
       'step3_droid': 'Paso 3: IP',
       'step3_droid_desc': 'Ver ajustes Wi-Fi.',
-      'contact_title': 'Enviar un comentario o reportar un problema',
+      'select_subject_title': 'Seleccionar tema',
+      'subject_error': 'Error',
+      'subject_bug': 'Bug',
+      'subject_update': 'Propuesta de actualización',
+      'subject_review': 'Reseña',
+      'contact_title': 'Enviar un mensaje',
       'contact_hint': 'Escribe tu mensaje aquí...',
       'contact_send': 'Enviar mensaje',
       'contact_success': '¡Mensaje enviado con éxito!',
@@ -193,6 +216,7 @@ class AppTranslations {
       'privacy_content': 'Al usar BX Remote, aceptas los siguientes términos:\n\n1. La aplicación utiliza la red local para transmitir comandos a tu PC.\n2. No se recopilan ni venden datos personales.\n3. Eres el único responsable de los comandos ejecutados en la máquina de destino.',
       'privacy_accept': 'Acepto',
       'privacy_refuse': 'Salir',
+      'select_port': 'Seleccionar puerto rápido',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -221,6 +245,8 @@ class AppTranslations {
       'v2_desc': '- Neue Sprachen bald verfügbar.',
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Mehrsprachiges System hinzugefügt.\n- Adaptive Konsole und .bat-Abruf-Popup.',
+      'v4_title': 'Version 1.0.3 / News',
+      'v4_desc': '- Unterstützung für mehrere Ports (80, 443, 2222, etc.).\n- Themabasiertes Meldesystem.',
       'retrieval_title': 'Datei abrufen?',
       'retrieval_content': 'Kostenlose Dienste:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Schritt 1: Ordner',
@@ -245,7 +271,12 @@ class AppTranslations {
       'step2_droid_desc': 'nc -l -p 55555',
       'step3_droid': 'Schritt 3: IP',
       'step3_droid_desc': 'Prüfen.',
-      'contact_title': 'Kommentar senden oder Problem melden',
+      'select_subject_title': 'Thema auswählen',
+      'subject_error': 'Fehler',
+      'subject_bug': 'Bug',
+      'subject_update': 'Update-Vorschlag',
+      'subject_review': 'Bewertung',
+      'contact_title': 'Nachricht senden',
       'contact_hint': 'Geben Sie Ihre Nachricht hier ein...',
       'contact_send': 'Nachricht senden',
       'contact_success': 'Nachricht erfolgreich gesendet!',
@@ -254,6 +285,7 @@ class AppTranslations {
       'privacy_content': 'Durch die Nutzung von BX Remote stimmen Sie den folgenden Bedingungen zu:\n\n1. Die App nutzt das lokale Netzwerk zur Übertragung von Befehlen an Ihren PC.\n2. Es werden keine personenbezogenen Daten gesammelt oder verkauft.\n3. Sie sind allein verantwortlich für die auf dem Zielgerät ausgeführten Befehle.',
       'privacy_accept': 'Akzeptieren',
       'privacy_refuse': 'Beenden',
+      'select_port': 'Schnellport auswählen',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -282,6 +314,8 @@ class AppTranslations {
       'v2_desc': '- Novos idiomas em breve.',
       'v3_title': 'Versão 1.0.2 / News',
       'v3_desc': '- Adicionado sistema multilíngue.\n- Console adaptativa e popup de recuperação .bat.',
+      'v4_title': 'Versão 1.0.3 / News',
+      'v4_desc': '- Suporte para múltiplas portas (80, 443, 2222, etc.).\n- Sistema de relatórios baseado em tópicos.',
       'retrieval_title': 'Como recuperar arquivo?',
       'retrieval_content': 'Sites gratuitos:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Passo 1: Pasta',
@@ -306,7 +340,12 @@ class AppTranslations {
       'step2_droid_desc': 'nc -l -p 55555',
       'step3_droid': 'Passo 3: IP',
       'step3_droid_desc': 'Verificar.',
-      'contact_title': 'Enviar comentário ou relatar problema',
+      'select_subject_title': 'Selecionar assunto',
+      'subject_error': 'Erro',
+      'subject_bug': 'Bug',
+      'subject_update': 'Proposta de atualização',
+      'subject_review': 'Avaliação',
+      'contact_title': 'Enviar mensagem',
       'contact_hint': 'Digite sua mensagem aqui...',
       'contact_send': 'Enviar mensagem',
       'contact_success': 'Mensagem enviada com sucesso!',
@@ -315,6 +354,7 @@ class AppTranslations {
       'privacy_content': 'Ao usar o BX Remote, você concorda com os seguintes termos:\n\n1. O aplicativo usa a rede local para transmitir comandos para o seu PC.\n2. Nenhum dado pessoal é coletado ou vendido.\n3. Você é o único responsável pelos comandos executados na máquina de destino.',
       'privacy_accept': 'Aceitar',
       'privacy_refuse': 'Sair',
+      'select_port': 'Selecionar porta rápida',
     }
   };
 
@@ -487,6 +527,56 @@ pause''';
   }
 
   void _showContactPopup() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFF050505),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(4),
+            side: const BorderSide(color: Colors.white10),
+          ),
+          title: Text(
+            tr('select_subject_title'),
+            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace"),
+          ),
+          content: SizedBox(
+            width: double.infinity,
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                _buildSubjectTile(tr('subject_error'), Colors.red),
+                _buildSubjectTile(tr('subject_bug'), Colors.orange),
+                _buildSubjectTile(tr('subject_update'), Colors.blue),
+                _buildSubjectTile(tr('subject_review'), Colors.green),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildSubjectTile(String subject, Color color) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      decoration: BoxDecoration(
+        color: const Color(0xFF0A0A0A),
+        borderRadius: BorderRadius.circular(4),
+        border: Border.all(color: Colors.white10),
+      ),
+      child: ListTile(
+        leading: Icon(Icons.label_outline, color: color, size: 18),
+        title: Text(subject, style: const TextStyle(color: Colors.white, fontSize: 13, fontFamily: "monospace")),
+        onTap: () {
+          Navigator.pop(context);
+          _showContentMessagePopup(subject);
+        },
+      ),
+    );
+  }
+
+  void _showContentMessagePopup(String subject) {
     final TextEditingController contactController = TextEditingController();
     bool isSendingLocal = false;
 
@@ -502,7 +592,7 @@ pause''';
                 side: const BorderSide(color: Colors.white10),
               ),
               title: Text(
-                tr('contact_title'),
+                "[$subject] ${tr('contact_title')}",
                 style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace"),
               ),
               content: SizedBox(
@@ -554,7 +644,8 @@ pause''';
                             isSendingLocal = true;
                           });
 
-                          final success = await sendDiscordWebhook(text);
+                          final formattedMessage = "[$subject] $text";
+                          final success = await sendDiscordWebhook(formattedMessage);
 
                           if (!mounted) return;
 
@@ -584,6 +675,27 @@ pause''';
         );
       },
     );
+  }
+
+  void _showPortSelectorMenu(BuildContext context) {
+    showMenu<String>(
+      context: context,
+      position: const RelativeRect.fromLTRB(100, 200, 50, 100),
+      color: const Color(0xFF111111),
+      items: const [
+        PopupMenuItem(value: '55555', child: Text('55555 (Défaut)', style: TextStyle(color: Colors.white, fontSize: 12))),
+        PopupMenuItem(value: '80', child: Text('80 (HTTP)', style: TextStyle(color: Colors.white, fontSize: 12))),
+        PopupMenuItem(value: '443', child: Text('443 (HTTPS)', style: TextStyle(color: Colors.white, fontSize: 12))),
+        PopupMenuItem(value: '2222', child: Text('2222 (SSH Alt)', style: TextStyle(color: Colors.white, fontSize: 12))),
+        PopupMenuItem(value: '8080', child: Text('8080 (Proxy)', style: TextStyle(color: Colors.white, fontSize: 12))),
+      ],
+    ).then((selectedPort) {
+      if (selectedPort != null) {
+        setState(() {
+          _portController.text = selectedPort;
+        });
+      }
+    });
   }
 
   void _updateTypingState() {
@@ -813,11 +925,21 @@ pause''';
                       const SizedBox(width: 8),
                       Expanded(
                         flex: 1,
-                        child: TextField(
-                          controller: _portController,
-                          keyboardType: TextInputType.number,
-                          style: const TextStyle(fontSize: 16, color: Colors.white),
-                          decoration: _customInputStyle(tr('port')),
+                        child: Stack(
+                          alignment: Alignment.centerRight,
+                          children: [
+                            TextField(
+                              controller: _portController,
+                              keyboardType: TextInputType.number,
+                              style: const TextStyle(fontSize: 16, color: Colors.white),
+                              decoration: _customInputStyle(tr('port')),
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.arrow_drop_down, color: Color(0xFFFF0000)),
+                              onPressed: () => _showPortSelectorMenu(context),
+                              tooltip: tr('select_port'),
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -849,7 +971,7 @@ pause''';
                               child: Container(
                                 padding: const EdgeInsets.all(16),
                                 width: double.infinity,
-                                height: 350,
+                                height: 380,
                                 child: Column(
                                   children: [
                                     Row(
@@ -940,6 +1062,30 @@ pause''';
                                                     alignment: Alignment.centerLeft,
                                                     child: Text(
                                                       tr('v3_desc'),
+                                                      style: const TextStyle(color: Colors.white70, fontSize: 12, height: 1.4, fontFamily: "monospace"),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const Divider(color: Colors.white10),
+                                          Theme(
+                                            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                                            child: ExpansionTile(
+                                              iconColor: const Color(0xFFFF0000),
+                                              collapsedIconColor: Colors.white38,
+                                              title: Text(
+                                                tr('v4_title'),
+                                                style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold, fontFamily: "monospace"),
+                                              ),
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  child: Align(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: Text(
+                                                      tr('v4_desc'),
                                                       style: const TextStyle(color: Colors.white70, fontSize: 12, height: 1.4, fontFamily: "monospace"),
                                                     ),
                                                   ),
