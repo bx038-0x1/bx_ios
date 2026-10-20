@@ -41,7 +41,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Amélioration du design des boutons.\n- Traduction dynamique des logs système.\n- Fenêtre de console agrandie par-dessus la saisie.',
+      'v5_desc': '- Amélioration du design des boutons.\n- Traduction dynamique des logs système.\n- Fenêtre de console agrandie et repositionnée.',
       'retrieval_title': 'Comment recuperer le fichier ?',
       'retrieval_content': 'Voici des sites gratuits sans inscription pour partager et recuperer votre script .bat sur Windows :\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Étape 1 : creer un dossier securisé',
@@ -122,7 +122,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support for multiple connection ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Redesigned button styles.\n- Dynamic translation for system logs.\n- Expanded overlay log window height.',
+      'v5_desc': '- Redesigned button styles.\n- Dynamic translation for system logs.\n- Expanded and repositioned overlay log window.',
       'retrieval_title': 'How to retrieve file?',
       'retrieval_content': 'Here are free no-login sites to share and retrieve your .bat script on Windows:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Step 1: create a secure folder',
@@ -489,6 +489,7 @@ class _RemoteControlScreenState extends State<RemoteControlScreen> with SingleTi
   final TextEditingController _portController = TextEditingController(text: "55555");
   final TextEditingController _commandController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
+  final ScrollController _overlayScrollController = ScrollController();
   final FocusNode _commandFocusNode = FocusNode();
 
   Socket? _socket;
@@ -782,6 +783,7 @@ pause''';
     _portController.dispose();
     _commandController.dispose();
     _scrollController.dispose();
+    _overlayScrollController.dispose();
     _socket?.destroy();
     super.dispose();
   }
@@ -806,6 +808,13 @@ pause''';
           curve: Curves.easeOut,
         );
       }
+      if (_overlayScrollController.hasClients) {
+        _overlayScrollController.animateTo(
+          _overlayScrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeOut,
+        );
+      }
     });
   }
 
@@ -822,6 +831,13 @@ pause''';
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
           _scrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeOut,
+        );
+      }
+      if (_overlayScrollController.hasClients) {
+        _overlayScrollController.animateTo(
+          _overlayScrollController.position.maxScrollExtent,
           duration: const Duration(milliseconds: 200),
           curve: Curves.easeOut,
         );
@@ -1339,7 +1355,7 @@ pause''';
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                           ),
                           onPressed: _handleCommandExecution,
-                          child: const Icon(Icons.arrow_forward, size: 20),
+                          child: const Icon(Icons.send, size: 18),
                         ),
                       ),
                     ],
@@ -1397,7 +1413,7 @@ pause''';
                 Positioned(
                   left: 0,
                   right: 0,
-                  bottom: 70,
+                  bottom: 135,
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
@@ -1416,7 +1432,7 @@ pause''';
                       ),
                       padding: const EdgeInsets.all(12),
                       child: ListView.builder(
-                        controller: _scrollController,
+                        controller: _overlayScrollController,
                         itemCount: logs.length,
                         itemBuilder: (context, index) {
                           final logItem = logs[index];
