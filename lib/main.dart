@@ -40,7 +40,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Optimisation de la compatibilité Xcode et gestion des permissions réseau.',
+      'v5_desc': '- Serveur HTTP intégré avec design pro et indicateur de chargement circulaire.\n- Commande curl optimisée.',
       'step1_win': 'Étape 1 : creer un dossier securisé',
       'step1_win_desc': 'Pour éviter que Windows Defender ou votre pare-feu bloque l\'application, évitez le dossier /Downloads.\n\nCréez un dossier neuf à la racine de votre système, par exemple : C:\\BXRemote.',
       'step2_win': 'Étape 2 : autorisations du dossier',
@@ -93,12 +93,8 @@ class AppTranslations {
       'server_inactive': 'Serveur Inactif',
       'network_ips': 'Adresses IP détectées :',
       'cmd_to_run': 'Commande Windows (CMD / PowerShell) :',
+      'stop_server': 'Arrêter',
       'close': 'Fermer',
-      'perm_dialog_title': 'Permissions requises',
-      'perm_dialog_content': 'BX Remote a besoin des accès au réseau local et au Wi-Fi pour communiquer avec vos machines.',
-      'perm_accept': 'Autoriser',
-      'perm_refuse': 'Refuser',
-      'perm_request_btn': 'Autoriser le réseau et le WiFi',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -127,9 +123,9 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Added multilingual system.\n- Adaptive console.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Support for multiple ports.\n- Subject-based contact system.',
+      'v4_desc': '- Support for multiple connection ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Optimized Xcode compatibility and network permission handling.',
+      'v5_desc': '- Integrated HTTP server with professional UI and circular progress indicator.\n- Optimized curl command.',
       'step1_win': 'Step 1: create a secure folder',
       'step1_win_desc': 'To avoid Windows Defender or firewall blocking, avoid the /Downloads folder.\n\nCreate a new folder at system root, e.g., C:\\BXRemote.',
       'step2_win': 'Step 2: folder permissions',
@@ -182,12 +178,8 @@ class AppTranslations {
       'server_inactive': 'Server Inactive',
       'network_ips': 'Detected IP Addresses:',
       'cmd_to_run': 'Windows Command (CMD / PowerShell):',
+      'stop_server': 'Stop',
       'close': 'Close',
-      'perm_dialog_title': 'Required Permissions',
-      'perm_dialog_content': 'BX Remote requires local network and Wi-Fi access to communicate with your machines.',
-      'perm_accept': 'Allow',
-      'perm_refuse': 'Deny',
-      'perm_request_btn': 'Allow Network & Wi-Fi',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -218,7 +210,7 @@ class AppTranslations {
       'v4_title': 'Versión 1.0.3 / News',
       'v4_desc': '- Soporte para múltiples puertos.',
       'v5_title': 'Versión 1.0.4 / News',
-      'v5_desc': '- Compatibilidad con Xcode optimizada.',
+      'v5_desc': '- Servidor HTTP integrado con interfaz profesional e indicador circular.',
       'step1_win': 'Paso 1: carpeta segura',
       'step1_win_desc': 'Evite /Downloads. Cree C:\\BXRemote.',
       'step2_win': 'Paso 2: permisos',
@@ -271,12 +263,8 @@ class AppTranslations {
       'server_inactive': 'Servidor Inactivo',
       'network_ips': 'Direcciones IP detectadas:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
+      'stop_server': 'Detener',
       'close': 'Cerrar',
-      'perm_dialog_title': 'Permisos requeridos',
-      'perm_dialog_content': 'BX Remote necesita acceso a la red local y Wi-Fi.',
-      'perm_accept': 'Permitir',
-      'perm_refuse': 'Denegar',
-      'perm_request_btn': 'Permitir red y Wi-Fi',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -307,7 +295,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Unterstützung für mehrere Ports.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Optimierte Xcode-Kompatibilität.',
+      'v5_desc': '- Integrierter HTTP-Server mit professioneller UI und Kreisfortschrittsanzeige.',
       'step1_win': 'Schritt 1: Ordner',
       'step1_win_desc': 'C:\\BXRemote erstellen.',
       'step2_win': 'Schritt 2: Rechte',
@@ -360,12 +348,8 @@ class AppTranslations {
       'server_inactive': 'Server Inaktiv',
       'network_ips': 'Erkannte IP-Adressen:',
       'cmd_to_run': 'Windows-Befehl (CMD / PowerShell):',
+      'stop_server': 'Stoppen',
       'close': 'Schließen',
-      'perm_dialog_title': 'Erforderliche Berechtigungen',
-      'perm_dialog_content': 'BX Remote benötigt Netzwerk- und WLAN-Zugriff.',
-      'perm_accept': 'Erlauben',
-      'perm_refuse': 'Ablehnen',
-      'perm_request_btn': 'Netzwerk & WLAN erlauben',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -396,7 +380,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Suporte para múltiplas portas.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Compatibilidade otimizada com o Xcode.',
+      'v5_desc': '- Servidor HTTP integrado com interface profissional e indicador de progresso circular.',
       'step1_win': 'Passo 1: Pasta',
       'step1_win_desc': 'Criar C:\\BXRemote.',
       'step2_win': 'Passo 2: Permissões',
@@ -445,16 +429,12 @@ class AppTranslations {
       'log_send_error': 'erro ao enviar',
       'log_server_started': 'servidor http iniciado na porta 8080',
       'server_status_title': 'Servidor HTTP e Rede Local',
-      'server_active': 'Server Ativo (Porta 8080)',
-      'server_inactive': 'Server Inativo',
+      'server_active': 'Servidor Ativo (Porta 8080)',
+      'server_inactive': 'Servidor Inativo',
       'network_ips': 'Endereços IP detectados:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
+      'stop_server': 'Parar',
       'close': 'Fechar',
-      'perm_dialog_title': 'Permissões necessárias',
-      'perm_dialog_content': 'BX Remote precisa de acesso à rede local e Wi-Fi.',
-      'perm_accept': 'Permitir',
-      'perm_refuse': 'Recusar',
-      'perm_request_btn': 'Permitir rede e Wi-Fi',
     }
   };
 
@@ -476,11 +456,6 @@ Future<bool> sendDiscordWebhook(String text) async {
   } catch (_) {
     return false;
   }
-}
-
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -542,7 +517,6 @@ class _RemoteControlScreenState extends State<RemoteControlScreen> with SingleTi
   bool _isConnected = false;
   bool _showLogs = true;
   bool _isTypingOrFocused = false;
-  bool _permissionsGranted = true;
   List<Map<String, dynamic>> logs = [];
 
   late AnimationController _animationController;
@@ -570,7 +544,6 @@ pause''';
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _checkPrivacyConsent();
-      _showPermissionDialogStartup();
     });
   }
 
@@ -581,55 +554,6 @@ pause''';
     if (!accepted && mounted) {
       _showPrivacyDialog();
     }
-  }
-
-  void _showPermissionDialogStartup() {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) {
-        return AlertDialog(
-          backgroundColor: const Color(0xFF0A0A0A),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-            side: const BorderSide(color: Color(0xFFFF0000), width: 1.5),
-          ),
-          title: Text(
-            tr('perm_dialog_title'),
-            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
-          ),
-          content: Text(
-            tr('perm_dialog_content'),
-            style: const TextStyle(color: Colors.white70, fontSize: 13, height: 1.5, fontFamily: "monospace"),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  _permissionsGranted = false;
-                });
-                Navigator.pop(context);
-              },
-              child: Text(tr('perm_refuse'), style: const TextStyle(color: Colors.white38)),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFFF0000),
-                foregroundColor: Colors.black,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              ),
-              onPressed: () {
-                setState(() {
-                  _permissionsGranted = true;
-                });
-                Navigator.pop(context);
-              },
-              child: Text(tr('perm_accept'), style: const TextStyle(fontWeight: FontWeight.bold)),
-            ),
-          ],
-        );
-      },
-    );
   }
 
   void _showPrivacyDialog() {
@@ -1123,22 +1047,6 @@ pause''';
             children: [
               Column(
                 children: [
-                  if (!_permissionsGranted)
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      width: double.infinity,
-                      child: ElevatedButton.icon(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFFF3333),
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                        ),
-                        onPressed: _showPermissionDialogStartup,
-                        icon: const Icon(Icons.warning_amber_rounded, size: 18),
-                        label: Text(tr('perm_request_btn'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "monospace")),
-                      ),
-                    ),
                   Row(
                     children: [
                       Expanded(
@@ -1662,14 +1570,14 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
 
     if (!mounted) return;
 
+    final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
+    final curlCommand = "curl -O http://$primaryIp:8080/server.bat";
+
     showDialog(
       context: context,
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setStateModal) {
-            final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
-            final curlCommand = "curl -O http://$primaryIp:8080/server.bat";
-
             return AlertDialog(
               backgroundColor: const Color(0xFF090909),
               shape: RoundedRectangleBorder(
@@ -1760,16 +1668,20 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                 ),
               ),
               actions: [
+                TextButton(
+                  onPressed: () {
+                    _stopHttpServer();
+                    setStateModal(() {});
+                  },
+                  child: Text(tr('stop_server'), style: const TextStyle(color: Colors.redAccent, fontFamily: "monospace")),
+                ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFF0000),
                     foregroundColor: Colors.black,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                   ),
-                  onPressed: () {
-                    _stopHttpServer();
-                    Navigator.pop(context);
-                  },
+                  onPressed: () => Navigator.pop(context),
                   child: Text(tr('close'), style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace")),
                 ),
               ],
