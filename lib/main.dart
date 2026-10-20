@@ -39,7 +39,9 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Ajout du système multilingue.\n- Console adaptative et popup de récupération .bat.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Support de multiples ports de connexion (80, 443, 2222, etc.).\n- Défilement automatique des logs vers le bas.\n- Sélection dynamique du sujet de contact.',
+      'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
+      'v5_title': 'Version 1.0.4 / News',
+      'v5_desc': '- Amélioration du design des boutons.\n- Traduction dynamique des logs système.\n- Fenêtre de console agrandie par-dessus la saisie.',
       'retrieval_title': 'Comment recuperer le fichier ?',
       'retrieval_content': 'Voici des sites gratuits sans inscription pour partager et recuperer votre script .bat sur Windows :\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Étape 1 : creer un dossier securisé',
@@ -79,6 +81,16 @@ class AppTranslations {
       'privacy_accept': 'J\'accepte',
       'privacy_refuse': 'Quitter',
       'select_port': 'Choisir un port rapide',
+      'log_invalid_ip_port': 'erreur : ip ou port invalide',
+      'log_connecting': 'connexion a',
+      'log_connected': 'connexion etablie',
+      'log_disconnected': 'deconnecté',
+      'log_network_error': 'erreur reseau',
+      'log_connection_closed': 'connexion interrompue par la cible',
+      'log_connection_failed': 'echec : cible introuvable',
+      'log_no_device': 'erreur : aucun appareil connecté',
+      'log_send_error': 'erreur d\'envoi',
+      'log_script_copied': 'script .bat personnalisé copié',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -108,7 +120,9 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Added multilingual system.\n- Adaptive console and .bat retrieval popup.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Support for multiple connection ports.\n- Automatic log scrolling.\n- Subject-based contact system.',
+      'v4_desc': '- Support for multiple connection ports.\n- Subject-based contact system.',
+      'v5_title': 'Version 1.0.4 / News',
+      'v5_desc': '- Redesigned button styles.\n- Dynamic translation for system logs.\n- Expanded overlay log window height.',
       'retrieval_title': 'How to retrieve file?',
       'retrieval_content': 'Here are free no-login sites to share and retrieve your .bat script on Windows:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Step 1: create a secure folder',
@@ -148,6 +162,16 @@ class AppTranslations {
       'privacy_accept': 'I Accept',
       'privacy_refuse': 'Exit',
       'select_port': 'Select quick port',
+      'log_invalid_ip_port': 'error: invalid ip or port',
+      'log_connecting': 'connecting to',
+      'log_connected': 'connection established',
+      'log_disconnected': 'disconnected',
+      'log_network_error': 'network error',
+      'log_connection_closed': 'connection closed by target',
+      'log_connection_failed': 'failed: target unreachable',
+      'log_no_device': 'error: no device connected',
+      'log_send_error': 'send error',
+      'log_script_copied': 'custom .bat script copied',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -177,7 +201,9 @@ class AppTranslations {
       'v3_title': 'Versión 1.0.2 / News',
       'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa y popup de recuperación .bat.',
       'v4_title': 'Versión 1.0.3 / News',
-      'v4_desc': '- Desplazamiento automático de registros.\n- Soporte para múltiples puertos.',
+      'v4_desc': '- Soporte para múltiples puertos.',
+      'v5_title': 'Versión 1.0.4 / News',
+      'v5_desc': '- Botones rediseñados.\n- Traducción dinámica de logs del sistema.\n- Ventana de consola ampliada.',
       'retrieval_title': '¿Cómo recuperar archivo?',
       'retrieval_content': 'Sitios gratuitos sin registro:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Paso 1: carpeta segura',
@@ -217,6 +243,16 @@ class AppTranslations {
       'privacy_accept': 'Acepto',
       'privacy_refuse': 'Salir',
       'select_port': 'Seleccionar puerto rápido',
+      'log_invalid_ip_port': 'error: ip o puerto no válido',
+      'log_connecting': 'conectando a',
+      'log_connected': 'conexión establecida',
+      'log_disconnected': 'desconectado',
+      'log_network_error': 'error de red',
+      'log_connection_closed': 'conexión cerrada por el destino',
+      'log_connection_failed': 'fallo: destino no encontrado',
+      'log_no_device': 'error: ningún dispositivo conectado',
+      'log_send_error': 'error de envío',
+      'log_script_copied': 'script .bat personalizado copiado',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -246,7 +282,9 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Mehrsprachiges System hinzugefügt.\n- Adaptive Konsole und .bat-Abruf-Popup.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Automatisches Scrollen im Log.\n- Unterstützung für mehrere Ports.',
+      'v4_desc': '- Unterstützung für mehrere Ports.',
+      'v5_title': 'Version 1.0.4 / News',
+      'v5_desc': '- Überarbeitete Buttons.\n- Dynamische Log-Übersetzung.\n- Vergrößertes Konsolenfenster.',
       'retrieval_title': 'Datei abrufen?',
       'retrieval_content': 'Kostenlose Dienste:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Schritt 1: Ordner',
@@ -286,6 +324,16 @@ class AppTranslations {
       'privacy_accept': 'Akzeptieren',
       'privacy_refuse': 'Beenden',
       'select_port': 'Schnellport auswählen',
+      'log_invalid_ip_port': 'Fehler: ungültige IP oder Port',
+      'log_connecting': 'verbinde mit',
+      'log_connected': 'Verbindung hergestellt',
+      'log_disconnected': 'getrennt',
+      'log_network_error': 'Netzwerkfehler',
+      'log_connection_closed': 'Verbindung vom Ziel beendet',
+      'log_connection_failed': 'Fehler: Ziel nicht erreichbar',
+      'log_no_device': 'Fehler: kein Gerät verbunden',
+      'log_send_error': 'Sendefehler',
+      'log_script_copied': 'Benutzerdefiniertes .bat-Skript kopiert',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -315,7 +363,9 @@ class AppTranslations {
       'v3_title': 'Versão 1.0.2 / News',
       'v3_desc': '- Adicionado sistema multilíngue.\n- Console adaptativa e popup de recuperação .bat.',
       'v4_title': 'Versão 1.0.3 / News',
-      'v4_desc': '- Rolagem automática dos logs.\n- Suporte para múltiplas portas.',
+      'v4_desc': '- Suporte para múltiplas portas.',
+      'v5_title': 'Versão 1.0.4 / News',
+      'v5_desc': '- Botões redesignados.\n- Tradução dinâmica dos logs do sistema.\n- Janela de console expandida.',
       'retrieval_title': 'Como recuperar arquivo?',
       'retrieval_content': 'Sites gratuitos:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Passo 1: Pasta',
@@ -355,6 +405,16 @@ class AppTranslations {
       'privacy_accept': 'Aceitar',
       'privacy_refuse': 'Sair',
       'select_port': 'Selecionar porta rápida',
+      'log_invalid_ip_port': 'erro: ip ou porta inválido',
+      'log_connecting': 'conectando a',
+      'log_connected': 'conexão estabelecida',
+      'log_disconnected': 'desconectado',
+      'log_network_error': 'erro de rede',
+      'log_connection_closed': 'conexão fechada pelo destino',
+      'log_connection_failed': 'falha: destino inacessível',
+      'log_no_device': 'erro: nenhum dispositivo conectado',
+      'log_send_error': 'erro ao enviar',
+      'log_script_copied': 'script .bat personalizado copiado',
     }
   };
 
@@ -483,14 +543,14 @@ pause''';
         return WillPopScope(
           onWillPop: () async => false,
           child: AlertDialog(
-            backgroundColor: const Color(0xFF050505),
+            backgroundColor: const Color(0xFF0A0A0A),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4),
-              side: const BorderSide(color: Color(0xFFFF0000)),
+              borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(color: Color(0xFFFF0000), width: 1.5),
             ),
             title: Text(
               tr('privacy_title'),
-              style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace"),
+              style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
             ),
             content: SingleChildScrollView(
               child: Text(
@@ -509,8 +569,9 @@ pause''';
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFFF0000),
                   foregroundColor: Colors.black,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                  elevation: 4,
+                  shadowColor: const Color(0xFFFF0000).withOpacity(0.4),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
                 onPressed: () async {
                   final prefs = await SharedPreferences.getInstance();
@@ -531,14 +592,14 @@ pause''';
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: const Color(0xFF050505),
+          backgroundColor: const Color(0xFF0A0A0A),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(12),
             side: const BorderSide(color: Colors.white10),
           ),
           title: Text(
             tr('select_subject_title'),
-            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace"),
+            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace", fontWeight: FontWeight.bold),
           ),
           content: SizedBox(
             width: double.infinity,
@@ -561,12 +622,12 @@ pause''';
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
-        color: const Color(0xFF0A0A0A),
-        borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: Colors.white10),
+        color: const Color(0xFF141414),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: color.withOpacity(0.3)),
       ),
       child: ListTile(
-        leading: Icon(Icons.label_outline, color: color, size: 18),
+        leading: Icon(Icons.label_outline, color: color, size: 20),
         title: Text(subject, style: const TextStyle(color: Colors.white, fontSize: 13, fontFamily: "monospace")),
         onTap: () {
           Navigator.pop(context);
@@ -586,14 +647,14 @@ pause''';
         return StatefulBuilder(
           builder: (context, setStateModal) {
             return AlertDialog(
-              backgroundColor: const Color(0xFF050505),
+              backgroundColor: const Color(0xFF0A0A0A),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4),
+                borderRadius: BorderRadius.circular(12),
                 side: const BorderSide(color: Colors.white10),
               ),
               title: Text(
                 "[$subject] ${tr('contact_title')}",
-                style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace"),
+                style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace", fontWeight: FontWeight.bold),
               ),
               content: SizedBox(
                 width: double.infinity,
@@ -608,13 +669,13 @@ pause''';
                         hintText: tr('contact_hint'),
                         hintStyle: const TextStyle(color: Colors.white24, fontSize: 13),
                         filled: true,
-                        fillColor: const Color(0xFF0A0A0A),
+                        fillColor: const Color(0xFF121212),
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(4),
+                          borderRadius: BorderRadius.circular(8),
                           borderSide: const BorderSide(color: Colors.white10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(4),
+                          borderRadius: BorderRadius.circular(8),
                           borderSide: const BorderSide(color: Color(0xFFFF0000)),
                         ),
                       ),
@@ -631,8 +692,9 @@ pause''';
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFF0000),
                     foregroundColor: Colors.black,
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                    elevation: 4,
+                    shadowColor: const Color(0xFFFF0000).withOpacity(0.4),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: isSendingLocal
                       ? null
@@ -655,6 +717,8 @@ pause''';
                             SnackBar(
                               content: Text(success ? tr('contact_success') : tr('contact_error')),
                               backgroundColor: success ? Colors.green : Colors.red,
+                              behavior: SnackBarBehavior.floating,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
                           );
                         },
@@ -681,7 +745,8 @@ pause''';
     showMenu<String>(
       context: context,
       position: const RelativeRect.fromLTRB(100, 200, 50, 100),
-      color: const Color(0xFF111111),
+      color: const Color(0xFF141414),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       items: const [
         PopupMenuItem(value: '55555', child: Text('55555 (Défaut)', style: TextStyle(color: Colors.white, fontSize: 12))),
         PopupMenuItem(value: '80', child: Text('80 (HTTP)', style: TextStyle(color: Colors.white, fontSize: 12))),
@@ -723,11 +788,13 @@ pause''';
 
   String tr(String key) => AppTranslations.get(key, widget.currentLang);
 
-  void _addLog(String message, {bool isError = false}) {
+  void _addLogKey(String key, {String extra = "", bool isError = false}) {
     if (!mounted) return;
     setState(() {
       logs.add({
-        "text": "[${DateTime.now().toString().substring(11, 19)}] ${message.toLowerCase()}",
+        "key": key,
+        "extra": extra,
+        "time": DateTime.now().toString().substring(11, 19),
         "isError": isError
       });
     });
@@ -742,8 +809,39 @@ pause''';
     });
   }
 
+  void _addRawLog(String message, {bool isError = false}) {
+    if (!mounted) return;
+    setState(() {
+      logs.add({
+        "raw": message,
+        "time": DateTime.now().toString().substring(11, 19),
+        "isError": isError
+      });
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        _scrollController.animateTo(
+          _scrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  String _formatLogItem(Map<String, dynamic> item) {
+    final time = item["time"] ?? "";
+    if (item.containsKey("raw")) {
+      return "[$time] ${item["raw"]}";
+    }
+    final key = item["key"] ?? "";
+    final extra = item["extra"] ?? "";
+    final translated = tr(key);
+    return "[$time] $translated $extra".trim().toLowerCase();
+  }
+
   void _navigateToBatScript() async {
-    final logMessage = await Navigator.push<String>(
+    final logKey = await Navigator.push<String>(
       context,
       MaterialPageRoute(
         builder: (context) => BatScriptScreen(
@@ -753,8 +851,8 @@ pause''';
       ),
     );
     
-    if (logMessage != null) {
-      _addLog(logMessage);
+    if (logKey != null) {
+      _addLogKey(logKey);
     }
   }
 
@@ -777,14 +875,14 @@ pause''';
     final port = int.tryParse(_portController.text.trim());
 
     if (ip.isEmpty || port == null) {
-      _addLog("erreur : ip ou port invalide", isError: true);
+      _addLogKey("log_invalid_ip_port", isError: true);
       return;
     }
 
     setState(() {
       _isLoading = true;
     });
-    _addLog("connexion a $ip:$port...");
+    _addLogKey("log_connecting", extra: "$ip:$port...");
 
     try {
       _socket = await Socket.connect(ip, port, timeout: const Duration(seconds: 4));
@@ -793,19 +891,19 @@ pause''';
         _isConnected = true;
         _isLoading = false;
       });
-      _addLog("connexion etablie");
+      _addLogKey("log_connected");
 
       _socket!.listen(
         (List<int> data) {
           final response = utf8.decode(data).trim();
-          _addLog(response);
+          _addRawLog(response);
         },
         onError: (error) {
-          _addLog("erreur reseau : $error", isError: true);
+          _addLogKey("log_network_error", extra: ": $error", isError: true);
           _disconnect();
         },
         onDone: () {
-          _addLog("connexion interrompue par la cible");
+          _addLogKey("log_connection_closed");
           _disconnect();
         },
       );
@@ -814,7 +912,7 @@ pause''';
         _isLoading = false;
         _isConnected = false;
       });
-      _addLog("echec : cible introuvable ($e)", isError: true);
+      _addLogKey("log_connection_failed", extra: "($e)", isError: true);
     }
   }
 
@@ -827,7 +925,7 @@ pause''';
       _isConnected = false;
       _isLoading = false;
     });
-    _addLog("deconnecter");
+    _addLogKey("log_disconnected");
   }
 
   void _handleCommandExecution() {
@@ -837,14 +935,14 @@ pause''';
     _commandController.clear();
 
     if (_socket == null) {
-      _addLog("erreur : aucun appareil connecter", isError: true);
+      _addLogKey("log_no_device", isError: true);
       return;
     }
     try {
       _socket!.write("$input\n");
-      _addLog("> $input");
+      _addRawLog("> $input");
     } catch (e) {
-      _addLog("erreur d'envoi : $e", isError: true);
+      _addLogKey("log_send_error", extra: ": $e", isError: true);
     }
   }
 
@@ -856,11 +954,11 @@ pause''';
       fillColor: const Color(0xFF0A0A0A),
       contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(color: Colors.white10),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(color: Color(0xFFFF0000), width: 1.5),
       ),
     );
@@ -871,7 +969,7 @@ pause''';
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        title: Text(tr('app_title'), style: const TextStyle(fontSize: 18, letterSpacing: 1)),
+        title: Text(tr('app_title'), style: const TextStyle(fontSize: 18, letterSpacing: 1, fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF000000),
         elevation: 0,
         actions: [
@@ -885,7 +983,7 @@ pause''';
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
                 value: widget.currentLang,
-                dropdownColor: const Color(0xFF111111),
+                dropdownColor: const Color(0xFF141414),
                 icon: const Icon(Icons.language, color: Color(0xFFFF0000), size: 18),
                 items: const [
                   DropdownMenuItem(value: 'fr', child: Text('🇫🇷FR', style: TextStyle(color: Colors.blue, fontSize: 12))),
@@ -902,7 +1000,7 @@ pause''';
           ),
           TextButton(
             onPressed: _navigateToBatScript,
-            child: Text(tr('copy_bat'), style: const TextStyle(color: Color(0xFFFF0000), fontSize: 13)),
+            child: Text(tr('copy_bat'), style: const TextStyle(color: Color(0xFFFF0000), fontSize: 13, fontWeight: FontWeight.bold)),
           )
         ],
       ),
@@ -963,15 +1061,15 @@ pause''';
                           context: context,
                           builder: (context) {
                             return Dialog(
-                              backgroundColor: const Color(0xFF050505),
+                              backgroundColor: const Color(0xFF0A0A0A),
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4),
+                                borderRadius: BorderRadius.circular(12),
                                 side: const BorderSide(color: Colors.white10),
                               ),
                               child: Container(
                                 padding: const EdgeInsets.all(16),
                                 width: double.infinity,
-                                height: 380,
+                                height: 400,
                                 child: Column(
                                   children: [
                                     Row(
@@ -1093,6 +1191,30 @@ pause''';
                                               ],
                                             ),
                                           ),
+                                          const Divider(color: Colors.white10),
+                                          Theme(
+                                            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                                            child: ExpansionTile(
+                                              iconColor: const Color(0xFFFF0000),
+                                              collapsedIconColor: Colors.white38,
+                                              title: Text(
+                                                tr('v5_title'),
+                                                style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold, fontFamily: "monospace"),
+                                              ),
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  child: Align(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: Text(
+                                                      tr('v5_desc'),
+                                                      style: const TextStyle(color: Colors.white70, fontSize: 12, height: 1.4, fontFamily: "monospace"),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -1148,6 +1270,13 @@ pause''';
                             decoration: BoxDecoration(
                               color: _isConnected ? const Color(0xFF000000) : const Color(0xFFFF0000),
                               shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: const Color(0xFFFF0000).withOpacity(_isConnected ? 0.2 : 0.5),
+                                  blurRadius: 15,
+                                  spreadRadius: 2,
+                                ),
+                              ],
                               border: Border.all(
                                 color: const Color(0xFFFF0000),
                                 width: 2,
@@ -1199,15 +1328,18 @@ pause''';
                       const SizedBox(width: 8),
                       SizedBox(
                         height: 48,
+                        width: 48,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFFFF0000),
                             foregroundColor: Colors.black,
-                            elevation: 0,
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                            elevation: 4,
+                            shadowColor: const Color(0xFFFF0000).withOpacity(0.4),
+                            padding: EdgeInsets.zero,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                           ),
                           onPressed: _handleCommandExecution,
-                          child: const Icon(Icons.arrow_forward, size: 19),
+                          child: const Icon(Icons.arrow_forward, size: 20),
                         ),
                       ),
                     ],
@@ -1221,7 +1353,7 @@ pause''';
                         onTap: () => setState(() => _showLogs = !_showLogs),
                         child: Text(
                           _showLogs ? tr('hide') : tr('show'),
-                          style: const TextStyle(color: Color(0xFFFF0000), fontSize: 11),
+                          style: const TextStyle(color: Color(0xFFFF0000), fontSize: 11, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],
@@ -1233,8 +1365,8 @@ pause''';
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: const Color(0xFF050505),
-                          borderRadius: BorderRadius.circular(4),
+                          color: const Color(0xFF0A0A0A),
+                          borderRadius: BorderRadius.circular(8),
                           border: Border.all(color: Colors.white10),
                         ),
                         padding: const EdgeInsets.all(10),
@@ -1247,7 +1379,7 @@ pause''';
                             return Padding(
                               padding: const EdgeInsets.symmetric(vertical: 2),
                               child: Text(
-                                logItem["text"] ?? "",
+                                _formatLogItem(logItem),
                                 style: TextStyle(
                                   color: isError ? const Color(0xFFFF3333) : Colors.white70,
                                   fontFamily: "monospace",
@@ -1269,13 +1401,20 @@ pause''';
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
-                      height: 160,
+                      height: 230,
                       decoration: BoxDecoration(
-                        color: const Color(0xEE050505),
-                        borderRadius: BorderRadius.circular(6),
-                        border: Border.all(color: const Color(0xFFFF0000), width: 1),
+                        color: const Color(0xF7050505),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: const Color(0xFFFF0000), width: 1.5),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.8),
+                            blurRadius: 10,
+                            spreadRadius: 2,
+                          ),
+                        ],
                       ),
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(12),
                       child: ListView.builder(
                         controller: _scrollController,
                         itemCount: logs.length,
@@ -1285,7 +1424,7 @@ pause''';
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 2),
                             child: Text(
-                              logItem["text"] ?? "",
+                              _formatLogItem(logItem),
                               style: TextStyle(
                                 color: isError ? const Color(0xFFFF3333) : Colors.white70,
                                 fontFamily: "monospace",
@@ -1342,14 +1481,14 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: const Color(0xFF050505),
+          backgroundColor: const Color(0xFF0A0A0A),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(12),
             side: const BorderSide(color: Colors.white10),
           ),
           title: Text(
             tr('retrieval_title'),
-            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace"),
+            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
           ),
           content: SingleChildScrollView(
             child: Text(
@@ -1360,7 +1499,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text("OK", style: TextStyle(color: Color(0xFFFF0000))),
+              child: const Text("OK", style: TextStyle(color: Color(0xFFFF0000), fontWeight: FontWeight.bold)),
             ),
           ],
         );
@@ -1373,7 +1512,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFF000000),
       appBar: AppBar(
-        title: Text(tr('bat_config_title'), style: const TextStyle(fontSize: 16, fontFamily: "monospace")),
+        title: Text(tr('bat_config_title'), style: const TextStyle(fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF000000),
         elevation: 0,
         leading: IconButton(
@@ -1400,7 +1539,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                   style: OutlinedButton.styleFrom(
                     foregroundColor: const Color(0xFFFF0000),
                     side: const BorderSide(color: Color(0xFFFF0000)),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
                   onPressed: () => _showRetrievalDialog(context),
@@ -1418,13 +1557,13 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                 style: const TextStyle(color: Colors.white70, fontFamily: "monospace", fontSize: 12),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: const Color(0xFF050505),
+                  fillColor: const Color(0xFF0A0A0A),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(4),
+                    borderRadius: BorderRadius.circular(8),
                     borderSide: const BorderSide(color: Colors.white10),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(4),
+                    borderRadius: BorderRadius.circular(8),
                     borderSide: const BorderSide(color: Color(0xFFFF0000)),
                   ),
                 ),
@@ -1438,12 +1577,13 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFFF0000),
                   foregroundColor: Colors.black,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                  elevation: 4,
+                  shadowColor: const Color(0xFFFF0000).withOpacity(0.4),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
                 onPressed: () {
                   Clipboard.setData(ClipboardData(text: _scriptController.text));
-                  Navigator.pop(context, "script .bat copié.");
+                  Navigator.pop(context, "log_script_copied");
                 },
                 child: Text(tr('copy_script'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
               ),
@@ -1468,7 +1608,7 @@ class ConnectionHelpScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color(0xFF000000),
         appBar: AppBar(
-          title: Text(tr('help_title'), style: const TextStyle(fontSize: 16, fontFamily: "monospace")),
+          title: Text(tr('help_title'), style: const TextStyle(fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold)),
           backgroundColor: const Color(0xFF000000),
           elevation: 0,
           leading: IconButton(
@@ -1510,8 +1650,8 @@ class HelpStepToggle extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
-        color: const Color(0xFF050505),
-        borderRadius: BorderRadius.circular(4),
+        color: const Color(0xFF0A0A0A),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.white10),
       ),
       child: Theme(
