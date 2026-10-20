@@ -25,8 +25,7 @@ class AppTranslations {
       'hide': '< masquer',
       'show': '> afficher',
       'bat_config_title': 'Config de server .bat',
-      'copy_script': 'copier le script',
-      'how_to_retrieve': 'Comment recuperer le fichier ?',
+      'generate_and_host': 'Generer et heberger',
       'help_title': 'Guide de connexion et aide',
       'tab_windows': 'windows',
       'tab_macos': 'macos',
@@ -41,15 +40,13 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Amélioration du design des boutons.\n- Traduction dynamique des logs système.\n- Fenêtre de console agrandie et repositionnée.',
-      'retrieval_title': 'Comment recuperer le fichier ?',
-      'retrieval_content': 'Voici des sites gratuits sans inscription pour partager et recuperer votre script .bat sur Windows :\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
+      'v5_desc': '- Serveur HTTP intégré pour héberger et diffuser le script .bat sur le réseau local.\n- Détection automatique des IP.',
       'step1_win': 'Étape 1 : creer un dossier securisé',
       'step1_win_desc': 'Pour éviter que Windows Defender ou votre pare-feu bloque l\'application, évitez le dossier /Downloads.\n\nCréez un dossier neuf à la racine de votre système, par exemple : C:\\BXRemote.',
       'step2_win': 'Étape 2 : autorisations du dossier',
       'step2_win_desc': 'Faites un clic droit sur votre dossier créé -> Propriétés -> Sécurité.\n\nVérifiez que votre session utilisateur possède le contrôle total sur ce dossier afin d\'exécuter des fichiers sans contraintes.',
       'step3_win': 'Étape 3 : deploiement du script .bat',
-      'step3_win_desc': '1. Copiez le script .bat depuis l\'application.\n2. Dans votre dossier sécurisé, créez un document texte nommé \'serveur.bat\'.\n3. Collez le code dedans et sauvegardez.\n4. Double-cliquez pour exécuter l\'écouteur sur le port 55555.',
+      'step3_win_desc': '1. Utilisez l\'option "Generer et heberger" pour lancer le serveur local.\n2. Récupérez le fichier via la commande CMD Windows affichée.\n3. Double-cliquez pour exécuter l\'écouteur sur le port choisi.',
       'step4_win': 'Étape 4 : recuperer l adresse ip locale',
       'step4_win_desc': 'Ouvrez l\'invite de commande (cmd) sur votre PC, tapez \'ipconfig\' et repérez la ligne \'Adresse IPv4\' (ex: 192.168.1.35).\n\nEnterez cette IP et le port dans l\'application pour initier la liaison.',
       'step1_mac': 'Étape 1 : configurer un repertoire isole',
@@ -90,7 +87,13 @@ class AppTranslations {
       'log_connection_failed': 'echec : cible introuvable',
       'log_no_device': 'erreur : aucun appareil connecté',
       'log_send_error': 'erreur d\'envoi',
-      'log_script_copied': 'script .bat personnalisé copié',
+      'log_server_started': 'serveur http démarré sur le port 8080',
+      'server_status_title': 'Statut du serveur HTTP & Réseau',
+      'server_active': 'Serveur ACTIF (Port 8080)',
+      'server_inactive': 'Serveur INACTIF',
+      'network_ips': 'Adresses IP détectées :',
+      'cmd_to_run': 'Commande CMD Windows pour télécharger :',
+      'stop_server': 'Arrêter le serveur',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -106,8 +109,7 @@ class AppTranslations {
       'hide': '< hide',
       'show': '> show',
       'bat_config_title': 'Batch Server Config',
-      'copy_script': 'copy script',
-      'how_to_retrieve': 'How to retrieve file?',
+      'generate_and_host': 'Generate and host',
       'help_title': 'Connection Guide & Help',
       'tab_windows': 'windows',
       'tab_macos': 'macos',
@@ -122,15 +124,13 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support for multiple connection ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Redesigned button styles.\n- Dynamic translation for system logs.\n- Expanded and repositioned overlay log window.',
-      'retrieval_title': 'How to retrieve file?',
-      'retrieval_content': 'Here are free no-login sites to share and retrieve your .bat script on Windows:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
+      'v5_desc': '- Integrated HTTP server to host and serve the .bat script over local network.\n- Automatic IP detection.',
       'step1_win': 'Step 1: create a secure folder',
       'step1_win_desc': 'To avoid Windows Defender or firewall blocking, avoid the /Downloads folder.\n\nCreate a new folder at system root, e.g., C:\\BXRemote.',
       'step2_win': 'Step 2: folder permissions',
       'step2_win_desc': 'Right click folder -> Properties -> Security.\n\nEnsure your user session has full control.',
       'step3_win': 'Step 3: deploy .bat script',
-      'step3_win_desc': '1. Copy bat script.\n2. Create server.bat in your secure folder.\n3. Paste code and save.\n4. Double click to run listener on port 55555.',
+      'step3_win_desc': '1. Use "Generate and host" to start local server.\n2. Retrieve file via Windows CMD command.\n3. Double click to run listener on chosen port.',
       'step4_win': 'Step 4: retrieve local IP',
       'step4_win_desc': 'Open cmd, type \'ipconfig\' and find IPv4 Address (e.g. 192.168.1.35).\n\nEnter this IP and port.',
       'step1_mac': 'Step 1: isolated directory',
@@ -171,7 +171,13 @@ class AppTranslations {
       'log_connection_failed': 'failed: target unreachable',
       'log_no_device': 'error: no device connected',
       'log_send_error': 'send error',
-      'log_script_copied': 'custom .bat script copied',
+      'log_server_started': 'http server started on port 8080',
+      'server_status_title': 'HTTP Server Status & Network',
+      'server_active': 'Server ACTIVE (Port 8080)',
+      'server_inactive': 'Server INACTIVE',
+      'network_ips': 'Detected IP Addresses:',
+      'cmd_to_run': 'Windows CMD command to download:',
+      'stop_server': 'Stop server',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -187,8 +193,7 @@ class AppTranslations {
       'hide': '< ocultar',
       'show': '> mostrar',
       'bat_config_title': 'Config servidor .bat',
-      'copy_script': 'copiar script',
-      'how_to_retrieve': '¿Cómo recuperar archivo?',
+      'generate_and_host': 'Generar y alojar',
       'help_title': 'Guía de conexión',
       'tab_windows': 'windows',
       'tab_macos': 'macos',
@@ -199,19 +204,17 @@ class AppTranslations {
       'v2_title': 'Versión 1.0.1 / News',
       'v2_desc': '- Nuevos idiomas próximamente.',
       'v3_title': 'Versión 1.0.2 / News',
-      'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa y popup de recuperación .bat.',
+      'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa.',
       'v4_title': 'Versión 1.0.3 / News',
       'v4_desc': '- Soporte para múltiples puertos.',
       'v5_title': 'Versión 1.0.4 / News',
-      'v5_desc': '- Botones rediseñados.\n- Traducción dinámica de logs del sistema.\n- Ventana de consola ampliada.',
-      'retrieval_title': '¿Cómo recuperar archivo?',
-      'retrieval_content': 'Sitios gratuitos sin registro:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
+      'v5_desc': '- Servidor HTTP integrado para alojar y servir el script .bat.\n- Detección automática de IP.',
       'step1_win': 'Paso 1: carpeta segura',
       'step1_win_desc': 'Evite /Downloads. Cree C:\\BXRemote.',
       'step2_win': 'Paso 2: permisos',
       'step2_win_desc': 'Control total requerido.',
       'step3_win': 'Paso 3: script .bat',
-      'step3_win_desc': 'Cree serveur.bat y ejecute.',
+      'step3_win_desc': 'Use "Generar y alojar" y descargue vía CMD.',
       'step4_win': 'Paso 4: IP local',
       'step4_win_desc': 'Use ipconfig en cmd.',
       'step1_mac': 'Paso 1: directorio aislado',
@@ -252,7 +255,13 @@ class AppTranslations {
       'log_connection_failed': 'fallo: destino no encontrado',
       'log_no_device': 'error: ningún dispositivo conectado',
       'log_send_error': 'error de envío',
-      'log_script_copied': 'script .bat personalizado copiado',
+      'log_server_started': 'servidor http iniciado en puerto 8080',
+      'server_status_title': 'Estado del servidor HTTP y Red',
+      'server_active': 'Servidor ACTIVO (Puerto 8080)',
+      'server_inactive': 'Servidor INACTIVO',
+      'network_ips': 'Direcciones IP detectadas:',
+      'cmd_to_run': 'Comando CMD Windows para descargar:',
+      'stop_server': 'Detener servidor',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -268,8 +277,7 @@ class AppTranslations {
       'hide': '< ausblenden',
       'show': '> anzeigen',
       'bat_config_title': 'Batch Server Konfig',
-      'copy_script': 'Skript kopieren',
-      'how_to_retrieve': 'Datei abrufen?',
+      'generate_and_host': 'Generieren und hosten',
       'help_title': 'Verbindungsanleitung',
       'tab_windows': 'windows',
       'tab_macos': 'macos',
@@ -280,19 +288,17 @@ class AppTranslations {
       'v2_title': 'Version 1.0.1',
       'v2_desc': '- Neue Sprachen bald verfügbar.',
       'v3_title': 'Version 1.0.2 / News',
-      'v3_desc': '- Mehrsprachiges System hinzugefügt.\n- Adaptive Konsole und .bat-Abruf-Popup.',
+      'v3_desc': '- Mehrsprachiges System hinzugefügt.',
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Unterstützung für mehrere Ports.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Überarbeitete Buttons.\n- Dynamische Log-Übersetzung.\n- Vergrößertes Konsolenfenster.',
-      'retrieval_title': 'Datei abrufen?',
-      'retrieval_content': 'Kostenlose Dienste:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
+      'v5_desc': '- Integrierter HTTP-Server zum Host und Bereitstellen des .bat-Skripts im lokalen Netzwerk.\n- Automatische IP-Erkennung.',
       'step1_win': 'Schritt 1: Ordner',
       'step1_win_desc': 'C:\\BXRemote erstellen.',
       'step2_win': 'Schritt 2: Rechte',
       'step2_win_desc': 'Vollzugriff.',
       'step3_win': 'Schritt 3: Skript',
-      'step3_win_desc': 'serveur.bat ausführen.',
+      'step3_win_desc': 'Verwenden Sie "Generieren und hosten" und laden Sie über CMD herunter.',
       'step4_win': 'Schritt 4: IP',
       'step4_win_desc': 'ipconfig nutzen.',
       'step1_mac': 'Schritt 1: Ordner',
@@ -333,7 +339,13 @@ class AppTranslations {
       'log_connection_failed': 'Fehler: Ziel nicht erreichbar',
       'log_no_device': 'Fehler: kein Gerät verbunden',
       'log_send_error': 'Sendefehler',
-      'log_script_copied': 'Benutzerdefiniertes .bat-Skript kopiert',
+      'log_server_started': 'HTTP-Server auf Port 8080 gestartet',
+      'server_status_title': 'HTTP-Server-Status & Netzwerk',
+      'server_active': 'Server AKTIV (Port 8080)',
+      'server_inactive': 'Server INAKTIV',
+      'network_ips': 'Erkannte IP-Adressen:',
+      'cmd_to_run': 'Windows-CMD-Befehl zum Herunterladen:',
+      'stop_server': 'Server stoppen',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -349,8 +361,7 @@ class AppTranslations {
       'hide': '< ocultar',
       'show': '> mostrar',
       'bat_config_title': 'Config do servidor .bat',
-      'copy_script': 'copiar script',
-      'how_to_retrieve': 'Como recuperar arquivo?',
+      'generate_and_host': 'Gerar e hospedar',
       'help_title': 'Guia de conexão',
       'tab_windows': 'windows',
       'tab_macos': 'macos',
@@ -358,22 +369,20 @@ class AppTranslations {
       'maj_title': 'Atualizações',
       'v1_title': 'Versão 1.0.0',
       'v1_desc': '- Atualizado.',
-      'v2_title': 'Versão 1.0.1',
+      'v2_title': 'Version 1.0.1',
       'v2_desc': '- Novos idiomas em breve.',
-      'v3_title': 'Versão 1.0.2 / News',
-      'v3_desc': '- Adicionado sistema multilíngue.\n- Console adaptativa e popup de recuperação .bat.',
-      'v4_title': 'Versão 1.0.3 / News',
+      'v3_title': 'Version 1.0.2 / News',
+      'v3_desc': '- Adicionado sistema multilíngue.',
+      'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Suporte para múltiplas portas.',
       'v5_title': 'Versão 1.0.4 / News',
-      'v5_desc': '- Botões redesignados.\n- Tradução dinâmica dos logs do sistema.\n- Janela de console expandida.',
-      'retrieval_title': 'Como recuperar arquivo?',
-      'retrieval_content': 'Sites gratuitos:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
+      'v5_desc': '- Servidor HTTP integrado para hospedar e servir o script .bat na rede local.\n- Detecção automática de IP.',
       'step1_win': 'Passo 1: Pasta',
       'step1_win_desc': 'Criar C:\\BXRemote.',
       'step2_win': 'Passo 2: Permissões',
       'step2_win_desc': 'Controle total.',
       'step3_win': 'Passo 3: Script',
-      'step3_win_desc': 'Executar serveur.bat.',
+      'step3_win_desc': 'Use "Gerar e hospedar" e baixe via CMD.',
       'step4_win': 'Passo 4: IP',
       'step4_win_desc': 'Usar ipconfig.',
       'step1_mac': 'Passo 1: Pasta',
@@ -414,7 +423,13 @@ class AppTranslations {
       'log_connection_failed': 'falha: destino inacessível',
       'log_no_device': 'erro: nenhum dispositivo conectado',
       'log_send_error': 'erro ao enviar',
-      'log_script_copied': 'script .bat personalizado copiado',
+      'log_server_started': 'servidor http iniciado na porta 8080',
+      'server_status_title': 'Status do servidor HTTP e Rede',
+      'server_active': 'Servidor ATIVO (Porta 8080)',
+      'server_inactive': 'Servidor INATIVO',
+      'network_ips': 'Endereços IP detectados:',
+      'cmd_to_run': 'Comando CMD Windows para baixar:',
+      'stop_server': 'Parar servidor',
     }
   };
 
@@ -1413,7 +1428,7 @@ pause''';
                 Positioned(
                   left: 0,
                   right: 0,
-                  bottom: 135,
+                  bottom: 115,
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
@@ -1477,47 +1492,178 @@ class BatScriptScreen extends StatefulWidget {
 
 class _BatScriptScreenState extends State<BatScriptScreen> {
   late TextEditingController _scriptController;
+  HttpServer? _httpServer;
+  bool _isServerRunning = false;
+  List<String> _detectedIps = [];
 
   @override
   void initState() {
     super.initState();
     _scriptController = TextEditingController(text: widget.scriptContent);
+    _detectNetworkIps();
   }
 
   @override
   void dispose() {
     _scriptController.dispose();
+    _stopHttpServer();
     super.dispose();
   }
 
   String tr(String key) => AppTranslations.get(key, widget.currentLang);
 
-  void _showRetrievalDialog(BuildContext context) {
+  Future<void> _detectNetworkIps() async {
+    final List<String> ips = [];
+    try {
+      for (var interface in await NetworkInterface.list()) {
+        for (var addr in interface.addresses) {
+          if (addr.type == InternetAddressType.IPv4 && !addr.isLoopback) {
+            ips.add(addr.address);
+          }
+        }
+      }
+    } catch (_) {}
+    if (mounted) {
+      setState(() {
+        _detectedIps = ips;
+      });
+    }
+  }
+
+  Future<void> _startHttpServer() async {
+    if (_isServerRunning) return;
+    try {
+      _httpServer = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
+      _httpServer!.listen((HttpRequest request) {
+        request.response.headers.contentType = ContentType('text', 'plain', charset: 'utf-8');
+        request.response.write(_scriptController.text);
+        request.response.close();
+      });
+      setState(() {
+        _isServerRunning = true;
+      });
+    } catch (e) {
+      setState(() {
+        _isServerRunning = false;
+      });
+    }
+  }
+
+  void _stopHttpServer() {
+    _httpServer?.close();
+    _httpServer = null;
+    if (mounted) {
+      setState(() {
+        _isServerRunning = false;
+      });
+    }
+  }
+
+  void _showHostingDialog(BuildContext context) async {
+    await _detectNetworkIps();
+    await _startHttpServer();
+
+    if (!mounted) return;
+
+    final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
+    final cmdCommand = "powershell -Command \"Invoke-WebRequest -Uri 'http://$primaryIp:8080/server.bat' -OutFile 'server.bat'\"";
+
     showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
-          backgroundColor: const Color(0xFF0A0A0A),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-            side: const BorderSide(color: Colors.white10),
-          ),
-          title: Text(
-            tr('retrieval_title'),
-            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
-          ),
-          content: SingleChildScrollView(
-            child: Text(
-              tr('retrieval_content'),
-              style: const TextStyle(color: Colors.white70, fontSize: 13, height: 1.5, fontFamily: "monospace"),
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text("OK", style: TextStyle(color: Color(0xFFFF0000), fontWeight: FontWeight.bold)),
-            ),
-          ],
+        return StatefulBuilder(
+          builder: (context, setStateModal) {
+            return AlertDialog(
+              backgroundColor: const Color(0xFF0A0A0A),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+                side: const BorderSide(color: Color(0xFFFF0000), width: 1.5),
+              ),
+              title: Text(
+                tr('server_status_title'),
+                style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
+              ),
+              content: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.circle,
+                          size: 12,
+                          color: _isServerRunning ? const Color(0xFF00FF00) : const Color(0xFFFF0000),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          _isServerRunning ? tr('server_active') : tr('server_inactive'),
+                          style: TextStyle(
+                            color: _isServerRunning ? const Color(0xFF00FF00) : const Color(0xFFFF0000),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "monospace",
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      tr('network_ips'),
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: "monospace", fontSize: 13),
+                    ),
+                    const SizedBox(height: 6),
+                    ..._detectedIps.map((ip) => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 2),
+                      child: Text(
+                        "- $ip",
+                        style: const TextStyle(color: Colors.white70, fontFamily: "monospace", fontSize: 12),
+                      ),
+                    )),
+                    if (_detectedIps.isEmpty)
+                      const Text("- 127.0.0.1", style: TextStyle(color: Colors.white70, fontFamily: "monospace", fontSize: 12)),
+                    const SizedBox(height: 16),
+                    Text(
+                      tr('cmd_to_run'),
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: "monospace", fontSize: 13),
+                    ),
+                    const SizedBox(height: 6),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF141414),
+                        borderRadius: BorderRadius.circular(6),
+                        border: Border.all(color: Colors.white10),
+                      ),
+                      child: SelectableText(
+                        cmdCommand,
+                        style: const TextStyle(color: Color(0xFF00FF00), fontFamily: "monospace", fontSize: 11),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    _stopHttpServer();
+                    setStateModal(() {});
+                    Navigator.pop(context);
+                  },
+                  child: Text(tr('stop_server'), style: const TextStyle(color: Colors.redAccent)),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFFF0000),
+                    foregroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text("OK", style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ],
+            );
+          },
         );
       },
     );
@@ -1535,35 +1681,11 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
           icon: const Icon(Icons.arrow_back, color: Color(0xFFFF0000)),
           onPressed: () => Navigator.pop(context),
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.help_outline, color: Color(0xFFFF0000)),
-            onPressed: () => _showRetrievalDialog(context),
-            tooltip: tr('how_to_retrieve'),
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12.0),
-              child: SizedBox(
-                width: double.infinity,
-                child: OutlinedButton.icon(
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: const Color(0xFFFF0000),
-                    side: const BorderSide(color: Color(0xFFFF0000)),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                  ),
-                  onPressed: () => _showRetrievalDialog(context),
-                  icon: const Icon(Icons.download, size: 18),
-                  label: Text(tr('how_to_retrieve'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                ),
-              ),
-            ),
             Expanded(
               child: TextField(
                 controller: _scriptController,
@@ -1597,11 +1719,8 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                   shadowColor: const Color(0xFFFF0000).withOpacity(0.4),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
-                onPressed: () {
-                  Clipboard.setData(ClipboardData(text: _scriptController.text));
-                  Navigator.pop(context, "log_script_copied");
-                },
-                child: Text(tr('copy_script'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                onPressed: () => _showHostingDialog(context),
+                child: Text(tr('generate_and_host'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
               ),
             ),
           ],
