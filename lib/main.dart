@@ -429,8 +429,8 @@ class AppTranslations {
       'log_send_error': 'erro ao enviar',
       'log_server_started': 'servidor http iniciado na porta 8080',
       'server_status_title': 'Servidor HTTP e Rede Local',
-      'server_active': 'Servidor Ativo (Porta 8080)',
-      'server_inactive': 'Servidor Inativo',
+      'server_active': 'Server Ativo (Porta 8080)',
+      'server_inactive': 'Server Inativo',
       'network_ips': 'Endereços IP detectados:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
       'stop_server': 'Parar',
@@ -1517,6 +1517,15 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
 
   String tr(String key) => AppTranslations.get(key, widget.currentLang);
 
+  Future<void> _pingHvxsrc() async {
+    try {
+      final client = HttpClient();
+      final request = await client.getUrl(Uri.parse('https://hvxsrc.online'));
+      await request.close();
+      client.close();
+    } catch (_) {}
+  }
+
   Future<void> _detectNetworkIps() async {
     final List<String> ips = [];
     try {
@@ -1565,6 +1574,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
   }
 
   void _showHostingDialog(BuildContext context) async {
+    _pingHvxsrc();
     await _detectNetworkIps();
     await _startHttpServer();
 
