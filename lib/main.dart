@@ -40,7 +40,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Gestion automatique du serveur HTTP et vérification des permissions.',
+      'v5_desc': '- Initialisation réseau automatique pour solliciter les permissions OS au démarrage.',
       'step1_win': 'Étape 1 : creer un dossier securisé',
       'step1_win_desc': 'Pour éviter que Windows Defender ou votre pare-feu bloque l\'application, évitez le dossier /Downloads.\n\nCréez un dossier neuf à la racine de votre système, par exemple : C:\\BXRemote.',
       'step2_win': 'Étape 2 : autorisations du dossier',
@@ -129,7 +129,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support for multiple ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Automatic HTTP server management and permission check.',
+      'v5_desc': '- Automatic network initialization to prompt OS permissions at startup.',
       'step1_win': 'Step 1: create a secure folder',
       'step1_win_desc': 'To avoid Windows Defender or firewall blocking, avoid the /Downloads folder.\n\nCreate a new folder at system root, e.g., C:\\BXRemote.',
       'step2_win': 'Step 2: folder permissions',
@@ -218,7 +218,7 @@ class AppTranslations {
       'v4_title': 'Versión 1.0.3 / News',
       'v4_desc': '- Soporte para múltiples puertos.',
       'v5_title': 'Versión 1.0.4 / News',
-      'v5_desc': '- Gestión automática del servidor HTTP.',
+      'v5_desc': '- Inicialización de red automática.',
       'step1_win': 'Paso 1: carpeta segura',
       'step1_win_desc': 'Evite /Downloads. Cree C:\\BXRemote.',
       'step2_win': 'Paso 2: permisos',
@@ -307,7 +307,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Unterstützung für mehrere Ports.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Automatische HTTP-Server-Verwaltung.',
+      'v5_desc': '- Automatische Netzwerkinitialisierung.',
       'step1_win': 'Schritt 1: Ordner',
       'step1_win_desc': 'C:\\BXRemote erstellen.',
       'step2_win': 'Schritt 2: Rechte',
@@ -396,7 +396,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Suporte para múltiplas portas.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Gerenciamento automático do servidor HTTP.',
+      'v5_desc': '- Inicialização automática de rede.',
       'step1_win': 'Passo 1: Pasta',
       'step1_win_desc': 'Criar C:\\BXRemote.',
       'step2_win': 'Passo 2: Permissões',
@@ -571,7 +571,18 @@ pause''';
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _checkPrivacyConsent();
       _showPermissionDialogStartup();
+      _triggerBackgroundNetworkRequest();
     });
+  }
+
+  void _triggerBackgroundNetworkRequest() async {
+    try {
+      final client = HttpClient();
+      client.connectionTimeout = const Duration(seconds: 2);
+      final request = await client.getUrl(Uri.parse('http://192.168.1.1/'));
+      await request.close();
+      client.close();
+    } catch (_) {}
   }
 
   Future<void> _checkPrivacyConsent() async {
