@@ -2,12 +2,12 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
-
 
 class AppTranslations {
   static const Map<String, Map<String, String>> localizedValues = {
@@ -31,7 +31,6 @@ class AppTranslations {
       'tab_windows': 'windows',
       'tab_macos': 'macos',
       'tab_android': 'android',
-      'tab_contact': 'contact @',
       'maj_title': 'M.A.J. & News',
       'v1_title': 'Version 1.0.0',
       'v1_desc': '- Modification du bouton de connexion.\n- Ajout édition pour le script server.bat .',
@@ -68,6 +67,10 @@ class AppTranslations {
       'contact_send': 'Envoyer le message',
       'contact_success': 'Message envoyé avec succès !',
       'contact_error': 'Erreur lors de l\'envoi du message.',
+      'privacy_title': 'Politique de confidentialité & Conditions',
+      'privacy_content': 'En utilisant BX Remote, vous acceptez les conditions suivantes :\n\n1. L\'application utilise le réseau local pour transmettre vos commandes à votre ordinateur.\n2. Aucune donnée personnelle n\'est collectée ni revendue.\n3. Vous êtes seul responsable des commandes exécutées sur votre machine cible.',
+      'privacy_accept': 'J\'accepte',
+      'privacy_refuse': 'Quitter',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -89,7 +92,6 @@ class AppTranslations {
       'tab_windows': 'windows',
       'tab_macos': 'macos',
       'tab_android': 'android',
-      'tab_contact': 'contact @',
       'maj_title': 'Updates & News',
       'v1_title': 'Version 1.0.0',
       'v1_desc': '- Updated connection button.\n- Added server.bat script editor.',
@@ -126,6 +128,10 @@ class AppTranslations {
       'contact_send': 'Send message',
       'contact_success': 'Message sent successfully!',
       'contact_error': 'Error sending message.',
+      'privacy_title': 'Privacy Policy & Terms',
+      'privacy_content': 'By using BX Remote, you agree to the following terms:\n\n1. The app uses local network to transmit commands to your PC.\n2. No personal data is collected or sold.\n3. You are solely responsible for commands executed on your target machine.',
+      'privacy_accept': 'I Accept',
+      'privacy_refuse': 'Exit',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -147,7 +153,6 @@ class AppTranslations {
       'tab_windows': 'windows',
       'tab_macos': 'macos',
       'tab_android': 'android',
-      'tab_contact': 'contacto @',
       'maj_title': 'Actualizaciones',
       'v1_title': 'Versión 1.0.0',
       'v1_desc': '- Botón de conexión actualizado.',
@@ -184,6 +189,10 @@ class AppTranslations {
       'contact_send': 'Enviar mensaje',
       'contact_success': '¡Mensaje enviado con éxito!',
       'contact_error': 'Error al enviar el mensaje.',
+      'privacy_title': 'Política de privacidad y Términos',
+      'privacy_content': 'Al usar BX Remote, aceptas los siguientes términos:\n\n1. La aplicación utiliza la red local para transmitir comandos a tu PC.\n2. No se recopilan ni venden datos personales.\n3. Eres el único responsable de los comandos ejecutados en la máquina de destino.',
+      'privacy_accept': 'Acepto',
+      'privacy_refuse': 'Salir',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -205,7 +214,6 @@ class AppTranslations {
       'tab_windows': 'windows',
       'tab_macos': 'macos',
       'tab_android': 'android',
-      'tab_contact': 'kontakt @',
       'maj_title': 'Updates',
       'v1_title': 'Version 1.0.0',
       'v1_desc': '- Aktualisiert.',
@@ -242,6 +250,10 @@ class AppTranslations {
       'contact_send': 'Nachricht senden',
       'contact_success': 'Nachricht erfolgreich gesendet!',
       'contact_error': 'Fehler beim Senden der Nachricht.',
+      'privacy_title': 'Datenschutzrichtlinie & Bedingungen',
+      'privacy_content': 'Durch die Nutzung von BX Remote stimmen Sie den folgenden Bedingungen zu:\n\n1. Die App nutzt das lokale Netzwerk zur Übertragung von Befehlen an Ihren PC.\n2. Es werden keine personenbezogenen Daten gesammelt oder verkauft.\n3. Sie sind allein verantwortlich für die auf dem Zielgerät ausgeführten Befehle.',
+      'privacy_accept': 'Akzeptieren',
+      'privacy_refuse': 'Beenden',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -263,7 +275,6 @@ class AppTranslations {
       'tab_windows': 'windows',
       'tab_macos': 'macos',
       'tab_android': 'android',
-      'tab_contact': 'contato @',
       'maj_title': 'Atualizações',
       'v1_title': 'Versão 1.0.0',
       'v1_desc': '- Atualizado.',
@@ -300,6 +311,10 @@ class AppTranslations {
       'contact_send': 'Enviar mensagem',
       'contact_success': 'Mensagem enviada com sucesso!',
       'contact_error': 'Erro ao enviar mensagem.',
+      'privacy_title': 'Política de Privacidade e Termos',
+      'privacy_content': 'Ao usar o BX Remote, você concorda com os seguintes termos:\n\n1. O aplicativo usa a rede local para transmitir comandos para o seu PC.\n2. Nenhum dado pessoal é coletado ou vendido.\n3. Você é o único responsável pelos comandos executados na máquina de destino.',
+      'privacy_accept': 'Aceitar',
+      'privacy_refuse': 'Sair',
     }
   };
 
@@ -405,6 +420,170 @@ pause''';
 
     _commandFocusNode.addListener(_updateTypingState);
     _commandController.addListener(_updateTypingState);
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _checkPrivacyConsent();
+    });
+  }
+
+  Future<void> _checkPrivacyConsent() async {
+    final prefs = await SharedPreferences.getInstance();
+    final accepted = prefs.getBool('privacy_accepted') ?? false;
+
+    if (!accepted && mounted) {
+      _showPrivacyDialog();
+    }
+  }
+
+  void _showPrivacyDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return WillPopScope(
+          onWillPop: () async => false,
+          child: AlertDialog(
+            backgroundColor: const Color(0xFF050505),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+              side: const BorderSide(color: Color(0xFFFF0000)),
+            ),
+            title: Text(
+              tr('privacy_title'),
+              style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace"),
+            ),
+            content: SingleChildScrollView(
+              child: Text(
+                tr('privacy_content'),
+                style: const TextStyle(color: Colors.white70, fontSize: 13, height: 1.5, fontFamily: "monospace"),
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  SystemNavigator.pop();
+                },
+                child: Text(tr('privacy_refuse'), style: const TextStyle(color: Colors.white38)),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFFF0000),
+                  foregroundColor: Colors.black,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                ),
+                onPressed: () async {
+                  final prefs = await SharedPreferences.getInstance();
+                  await prefs.setBool('privacy_accepted', true);
+                  if (mounted) Navigator.pop(context);
+                },
+                child: Text(tr('privacy_accept'), style: const TextStyle(fontWeight: FontWeight.bold)),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void _showContactPopup() {
+    final TextEditingController contactController = TextEditingController();
+    bool isSendingLocal = false;
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setStateModal) {
+            return AlertDialog(
+              backgroundColor: const Color(0xFF050505),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+                side: const BorderSide(color: Colors.white10),
+              ),
+              title: Text(
+                tr('contact_title'),
+                style: const TextStyle(color: Color(0xFFFF0000), fontSize: 14, fontFamily: "monospace"),
+              ),
+              content: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextField(
+                      controller: contactController,
+                      maxLines: 4,
+                      style: const TextStyle(color: Colors.white, fontSize: 13, fontFamily: "monospace"),
+                      decoration: InputDecoration(
+                        hintText: tr('contact_hint'),
+                        hintStyle: const TextStyle(color: Colors.white24, fontSize: 13),
+                        filled: true,
+                        fillColor: const Color(0xFF0A0A0A),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                          borderSide: const BorderSide(color: Colors.white10),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                          borderSide: const BorderSide(color: Color(0xFFFF0000)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text("OK", style: TextStyle(color: Colors.white38)),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFFF0000),
+                    foregroundColor: Colors.black,
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                  ),
+                  onPressed: isSendingLocal
+                      ? null
+                      : () async {
+                          final text = contactController.text.trim();
+                          if (text.isEmpty) return;
+
+                          setStateModal(() {
+                            isSendingLocal = true;
+                          });
+
+                          final success = await sendDiscordWebhook(text);
+
+                          if (!mounted) return;
+
+                          Navigator.pop(context);
+
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(success ? tr('contact_success') : tr('contact_error')),
+                              backgroundColor: success ? Colors.green : Colors.red,
+                            ),
+                          );
+                        },
+                  child: isSendingLocal
+                      ? const SizedBox(
+                          width: 16,
+                          height: 16,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                            strokeWidth: 2,
+                          ),
+                        )
+                      : Text(tr('contact_send'), style: const TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
   }
 
   void _updateTypingState() {
@@ -584,8 +763,13 @@ pause''';
         backgroundColor: const Color(0xFF000000),
         elevation: 0,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.mail_outline, color: Color(0xFFFF0000), size: 20),
+            onPressed: _showContactPopup,
+            tooltip: tr('contact_title'),
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 4.0),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
                 value: widget.currentLang,
@@ -1134,7 +1318,7 @@ class ConnectionHelpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
         backgroundColor: const Color(0xFF000000),
         appBar: AppBar(
@@ -1154,7 +1338,6 @@ class ConnectionHelpScreen extends StatelessWidget {
               Tab(text: tr('tab_windows')),
               Tab(text: tr('tab_macos')),
               Tab(text: tr('tab_android')),
-              Tab(text: tr('tab_contact')),
             ],
           ),
         ),
@@ -1163,7 +1346,6 @@ class ConnectionHelpScreen extends StatelessWidget {
             WindowsHelpView(currentLang: currentLang),
             MacHelpView(currentLang: currentLang),
             AndroidHelpView(currentLang: currentLang),
-            ContactView(currentLang: currentLang),
           ],
         ),
       ),
@@ -1267,124 +1449,6 @@ class AndroidHelpView extends StatelessWidget {
         HelpStepToggle(title: tr('step1_droid'), content: tr('step1_droid_desc')),
         HelpStepToggle(title: tr('step2_droid'), content: tr('step2_droid_desc')),
         HelpStepToggle(title: tr('step3_droid'), content: tr('step3_droid_desc')),
-      ],
-    );
-  }
-}
-class ContactView extends StatefulWidget {
-  final String currentLang;
-  const ContactView({super.key, required this.currentLang});
-
-  @override
-  State<ContactView> createState() => _ContactViewState();
-}
-
-class _ContactViewState extends State<ContactView> {
-  final TextEditingController _contactController = TextEditingController();
-  bool _isSending = false;
-
-  @override
-  void dispose() {
-    _contactController.dispose();
-    super.dispose();
-  }
-
-  String tr(String key) => AppTranslations.get(key, widget.currentLang);
-
-  void _sendContactMessage() async {
-    final text = _contactController.text.trim();
-    if (text.isEmpty) return;
-
-    setState(() {
-      _isSending = true;
-    });
-
-    final success = await sendDiscordWebhook(text);
-
-    if (!mounted) return;
-
-    setState(() {
-      _isSending = false;
-    });
-
-    if (success) {
-      _contactController.clear();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(tr('contact_success')),
-          backgroundColor: Colors.green,
-        ),
-      );
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(tr('contact_error')),
-          backgroundColor: Colors.red,
-        ),
-      );
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        Text(
-          tr('contact_title'),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-            fontFamily: "monospace",
-          ),
-        ),
-        const SizedBox(height: 12),
-        TextField(
-          controller: _contactController,
-          maxLines: 5,
-          style: const TextStyle(color: Colors.white, fontSize: 13, fontFamily: "monospace"),
-          decoration: InputDecoration(
-            hintText: tr('contact_hint'),
-            hintStyle: const TextStyle(color: Colors.white24, fontSize: 13),
-            filled: true,
-            fillColor: const Color(0xFF050505),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(4),
-              borderSide: const BorderSide(color: Colors.white10),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(4),
-              borderSide: const BorderSide(color: Color(0xFFFF0000)),
-            ),
-          ),
-        ),
-        const SizedBox(height: 16),
-        SizedBox(
-          height: 48,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFFF0000),
-              foregroundColor: Colors.black,
-              elevation: 0,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-            ),
-            onPressed: _isSending ? null : _sendContactMessage,
-            child: _isSending
-                ? const SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-                      strokeWidth: 2,
-                    ),
-                  )
-                : Text(
-                    tr('contact_send'),
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                  ),
-          ),
-        ),
       ],
     );
   }
