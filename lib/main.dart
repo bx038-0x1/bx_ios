@@ -40,13 +40,13 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Serveur HTTP intégré pour héberger et diffuser le script .bat sur le réseau local.\n- Détection automatique des IP.',
+      'v5_desc': '- Serveur HTTP intégré avec design pro et indicateur de chargement circulaire.\n- Commande curl optimisée.',
       'step1_win': 'Étape 1 : creer un dossier securisé',
       'step1_win_desc': 'Pour éviter que Windows Defender ou votre pare-feu bloque l\'application, évitez le dossier /Downloads.\n\nCréez un dossier neuf à la racine de votre système, par exemple : C:\\BXRemote.',
       'step2_win': 'Étape 2 : autorisations du dossier',
       'step2_win_desc': 'Faites un clic droit sur votre dossier créé -> Propriétés -> Sécurité.\n\nVérifiez que votre session utilisateur possède le contrôle total sur ce dossier afin d\'exécuter des fichiers sans contraintes.',
       'step3_win': 'Étape 3 : deploiement du script .bat',
-      'step3_win_desc': '1. Utilisez l\'option "Generer et heberger" pour lancer le serveur local.\n2. Récupérez le fichier via la commande CMD Windows affichée.\n3. Double-cliquez pour exécuter l\'écouteur sur le port choisi.',
+      'step3_win_desc': '1. Utilisez l\'option "Generer et heberger" pour lancer le serveur local.\n2. Récupérez le fichier via la commande curl Windows affichée.\n3. Double-cliquez pour exécuter l\'écouteur sur le port choisi.',
       'step4_win': 'Étape 4 : recuperer l adresse ip locale',
       'step4_win_desc': 'Ouvrez l\'invite de commande (cmd) sur votre PC, tapez \'ipconfig\' et repérez la ligne \'Adresse IPv4\' (ex: 192.168.1.35).\n\nEnterez cette IP et le port dans l\'application pour initier la liaison.',
       'step1_mac': 'Étape 1 : configurer un repertoire isole',
@@ -88,12 +88,13 @@ class AppTranslations {
       'log_no_device': 'erreur : aucun appareil connecté',
       'log_send_error': 'erreur d\'envoi',
       'log_server_started': 'serveur http démarré sur le port 8080',
-      'server_status_title': 'Statut du serveur HTTP & Réseau',
-      'server_active': 'Serveur ACTIF (Port 8080)',
-      'server_inactive': 'Serveur INACTIF',
+      'server_status_title': 'Serveur HTTP & Réseau Local',
+      'server_active': 'Serveur Actif (Port 8080)',
+      'server_inactive': 'Serveur Inactif',
       'network_ips': 'Adresses IP détectées :',
-      'cmd_to_run': 'Commande CMD Windows pour télécharger :',
-      'stop_server': 'Arrêter le serveur',
+      'cmd_to_run': 'Commande Windows (CMD / PowerShell) :',
+      'stop_server': 'Arrêter',
+      'close': 'Fermer',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -120,17 +121,17 @@ class AppTranslations {
       'v2_title': 'Version 1.0.1 / News',
       'v2_desc': '- New languages coming soon: (English, German, Portuguese).',
       'v3_title': 'Version 1.0.2 / News',
-      'v3_desc': '- Added multilingual system.\n- Adaptive console and .bat retrieval popup.',
+      'v3_desc': '- Added multilingual system.\n- Adaptive console.',
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support for multiple connection ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Integrated HTTP server to host and serve the .bat script over local network.\n- Automatic IP detection.',
+      'v5_desc': '- Integrated HTTP server with professional UI and circular progress indicator.\n- Optimized curl command.',
       'step1_win': 'Step 1: create a secure folder',
       'step1_win_desc': 'To avoid Windows Defender or firewall blocking, avoid the /Downloads folder.\n\nCreate a new folder at system root, e.g., C:\\BXRemote.',
       'step2_win': 'Step 2: folder permissions',
       'step2_win_desc': 'Right click folder -> Properties -> Security.\n\nEnsure your user session has full control.',
       'step3_win': 'Step 3: deploy .bat script',
-      'step3_win_desc': '1. Use "Generate and host" to start local server.\n2. Retrieve file via Windows CMD command.\n3. Double click to run listener on chosen port.',
+      'step3_win_desc': '1. Use "Generate and host" to start local server.\n2. Retrieve file via Windows curl command.\n3. Double click to run listener on chosen port.',
       'step4_win': 'Step 4: retrieve local IP',
       'step4_win_desc': 'Open cmd, type \'ipconfig\' and find IPv4 Address (e.g. 192.168.1.35).\n\nEnter this IP and port.',
       'step1_mac': 'Step 1: isolated directory',
@@ -172,12 +173,13 @@ class AppTranslations {
       'log_no_device': 'error: no device connected',
       'log_send_error': 'send error',
       'log_server_started': 'http server started on port 8080',
-      'server_status_title': 'HTTP Server Status & Network',
-      'server_active': 'Server ACTIVE (Port 8080)',
-      'server_inactive': 'Server INACTIVE',
+      'server_status_title': 'HTTP Server & Local Network',
+      'server_active': 'Server Active (Port 8080)',
+      'server_inactive': 'Server Inactive',
       'network_ips': 'Detected IP Addresses:',
-      'cmd_to_run': 'Windows CMD command to download:',
-      'stop_server': 'Stop server',
+      'cmd_to_run': 'Windows Command (CMD / PowerShell):',
+      'stop_server': 'Stop',
+      'close': 'Close',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -204,17 +206,17 @@ class AppTranslations {
       'v2_title': 'Versión 1.0.1 / News',
       'v2_desc': '- Nuevos idiomas próximamente.',
       'v3_title': 'Versión 1.0.2 / News',
-      'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa.',
+      'v3_desc': '- Sistema multilingüe añadido.',
       'v4_title': 'Versión 1.0.3 / News',
       'v4_desc': '- Soporte para múltiples puertos.',
       'v5_title': 'Versión 1.0.4 / News',
-      'v5_desc': '- Servidor HTTP integrado para alojar y servir el script .bat.\n- Detección automática de IP.',
+      'v5_desc': '- Servidor HTTP integrado con interfaz profesional e indicador circular.',
       'step1_win': 'Paso 1: carpeta segura',
       'step1_win_desc': 'Evite /Downloads. Cree C:\\BXRemote.',
       'step2_win': 'Paso 2: permisos',
       'step2_win_desc': 'Control total requerido.',
       'step3_win': 'Paso 3: script .bat',
-      'step3_win_desc': 'Use "Generar y alojar" y descargue vía CMD.',
+      'step3_win_desc': 'Use "Generar y alojar" y descargue vía curl.',
       'step4_win': 'Paso 4: IP local',
       'step4_win_desc': 'Use ipconfig en cmd.',
       'step1_mac': 'Paso 1: directorio aislado',
@@ -256,12 +258,13 @@ class AppTranslations {
       'log_no_device': 'error: ningún dispositivo conectado',
       'log_send_error': 'error de envío',
       'log_server_started': 'servidor http iniciado en puerto 8080',
-      'server_status_title': 'Estado del servidor HTTP y Red',
-      'server_active': 'Servidor ACTIVO (Puerto 8080)',
-      'server_inactive': 'Servidor INACTIVO',
+      'server_status_title': 'Servidor HTTP y Red Local',
+      'server_active': 'Servidor Activo (Puerto 8080)',
+      'server_inactive': 'Servidor Inactivo',
       'network_ips': 'Direcciones IP detectadas:',
-      'cmd_to_run': 'Comando CMD Windows para descargar:',
-      'stop_server': 'Detener servidor',
+      'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
+      'stop_server': 'Detener',
+      'close': 'Cerrar',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -292,13 +295,13 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Unterstützung für mehrere Ports.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Integrierter HTTP-Server zum Host und Bereitstellen des .bat-Skripts im lokalen Netzwerk.\n- Automatische IP-Erkennung.',
+      'v5_desc': '- Integrierter HTTP-Server mit professioneller UI und Kreisfortschrittsanzeige.',
       'step1_win': 'Schritt 1: Ordner',
       'step1_win_desc': 'C:\\BXRemote erstellen.',
       'step2_win': 'Schritt 2: Rechte',
       'step2_win_desc': 'Vollzugriff.',
       'step3_win': 'Schritt 3: Skript',
-      'step3_win_desc': 'Verwenden Sie "Generieren und hosten" und laden Sie über CMD herunter.',
+      'step3_win_desc': 'Verwenden Sie "Generieren und hosten" und laden Sie über curl herunter.',
       'step4_win': 'Schritt 4: IP',
       'step4_win_desc': 'ipconfig nutzen.',
       'step1_mac': 'Schritt 1: Ordner',
@@ -340,12 +343,13 @@ class AppTranslations {
       'log_no_device': 'Fehler: kein Gerät verbunden',
       'log_send_error': 'Sendefehler',
       'log_server_started': 'HTTP-Server auf Port 8080 gestartet',
-      'server_status_title': 'HTTP-Server-Status & Netzwerk',
-      'server_active': 'Server AKTIV (Port 8080)',
-      'server_inactive': 'Server INAKTIV',
+      'server_status_title': 'HTTP-Server & Lokales Netzwerk',
+      'server_active': 'Server Aktiv (Port 8080)',
+      'server_inactive': 'Server Inaktiv',
       'network_ips': 'Erkannte IP-Adressen:',
-      'cmd_to_run': 'Windows-CMD-Befehl zum Herunterladen:',
-      'stop_server': 'Server stoppen',
+      'cmd_to_run': 'Windows-Befehl (CMD / PowerShell):',
+      'stop_server': 'Stoppen',
+      'close': 'Schließen',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -375,14 +379,14 @@ class AppTranslations {
       'v3_desc': '- Adicionado sistema multilíngue.',
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Suporte para múltiplas portas.',
-      'v5_title': 'Versão 1.0.4 / News',
-      'v5_desc': '- Servidor HTTP integrado para hospedar e servir o script .bat na rede local.\n- Detecção automática de IP.',
+      'v5_title': 'Version 1.0.4 / News',
+      'v5_desc': '- Servidor HTTP integrado com interface profissional e indicador de progresso circular.',
       'step1_win': 'Passo 1: Pasta',
       'step1_win_desc': 'Criar C:\\BXRemote.',
       'step2_win': 'Passo 2: Permissões',
       'step2_win_desc': 'Controle total.',
       'step3_win': 'Passo 3: Script',
-      'step3_win_desc': 'Use "Gerar e hospedar" e baixe via CMD.',
+      'step3_win_desc': 'Use "Gerar e hospedar" e baixe via curl.',
       'step4_win': 'Passo 4: IP',
       'step4_win_desc': 'Usar ipconfig.',
       'step1_mac': 'Passo 1: Pasta',
@@ -424,12 +428,13 @@ class AppTranslations {
       'log_no_device': 'erro: nenhum dispositivo conectado',
       'log_send_error': 'erro ao enviar',
       'log_server_started': 'servidor http iniciado na porta 8080',
-      'server_status_title': 'Status do servidor HTTP e Rede',
-      'server_active': 'Servidor ATIVO (Porta 8080)',
-      'server_inactive': 'Servidor INATIVO',
+      'server_status_title': 'Servidor HTTP e Rede Local',
+      'server_active': 'Servidor Ativo (Porta 8080)',
+      'server_inactive': 'Servidor Inativo',
       'network_ips': 'Endereços IP detectados:',
-      'cmd_to_run': 'Comando CMD Windows para baixar:',
-      'stop_server': 'Parar servidor',
+      'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
+      'stop_server': 'Parar',
+      'close': 'Fechar',
     }
   };
 
@@ -1566,7 +1571,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
     if (!mounted) return;
 
     final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
-    final cmdCommand = "powershell -Command \"Invoke-WebRequest -Uri 'http://$primaryIp:8080/server.bat' -OutFile 'server.bat'\"";
+    final curlCommand = "curl -O http://$primaryIp:8080/server.bat";
 
     showDialog(
       context: context,
@@ -1574,70 +1579,89 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
         return StatefulBuilder(
           builder: (context, setStateModal) {
             return AlertDialog(
-              backgroundColor: const Color(0xFF0A0A0A),
+              backgroundColor: const Color(0xFF090909),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(10),
                 side: const BorderSide(color: Color(0xFFFF0000), width: 1.5),
               ),
-              title: Text(
-                tr('server_status_title'),
-                style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
+              title: Row(
+                children: [
+                  const Icon(Icons.dns, color: Color(0xFFFF0000), size: 20),
+                  const SizedBox(width: 10),
+                  Text(
+                    tr('server_status_title'),
+                    style: const TextStyle(color: Colors.white, fontSize: 15, fontFamily: "monospace", fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
               content: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.circle,
-                          size: 12,
-                          color: _isServerRunning ? const Color(0xFF00FF00) : const Color(0xFFFF0000),
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          _isServerRunning ? tr('server_active') : tr('server_inactive'),
-                          style: TextStyle(
-                            color: _isServerRunning ? const Color(0xFF00FF00) : const Color(0xFFFF0000),
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "monospace",
-                            fontSize: 13,
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF121212),
+                        borderRadius: BorderRadius.circular(6),
+                        border: Border.all(color: Colors.white10),
+                      ),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 18,
+                            height: 18,
+                            child: _isServerRunning
+                                ? const CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFF0000)),
+                                  )
+                                : const Icon(Icons.circle, size: 10, color: Colors.grey),
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 12),
+                          Text(
+                            _isServerRunning ? tr('server_active') : tr('server_inactive'),
+                            style: TextStyle(
+                              color: _isServerRunning ? const Color(0xFF00FF00) : Colors.grey,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "monospace",
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(height: 16),
                     Text(
                       tr('network_ips'),
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: "monospace", fontSize: 13),
+                      style: const TextStyle(color: Colors.white60, fontFamily: "monospace", fontSize: 12),
                     ),
                     const SizedBox(height: 6),
                     ..._detectedIps.map((ip) => Padding(
                       padding: const EdgeInsets.symmetric(vertical: 2),
                       child: Text(
-                        "- $ip",
-                        style: const TextStyle(color: Colors.white70, fontFamily: "monospace", fontSize: 12),
+                        "• $ip",
+                        style: const TextStyle(color: Colors.white, fontFamily: "monospace", fontSize: 13, fontWeight: FontWeight.w600),
                       ),
                     )),
                     if (_detectedIps.isEmpty)
-                      const Text("- 127.0.0.1", style: TextStyle(color: Colors.white70, fontFamily: "monospace", fontSize: 12)),
+                      const Text("• 127.0.0.1", style: TextStyle(color: Colors.white, fontFamily: "monospace", fontSize: 13)),
                     const SizedBox(height: 16),
                     Text(
                       tr('cmd_to_run'),
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: "monospace", fontSize: 13),
+                      style: const TextStyle(color: Colors.white60, fontFamily: "monospace", fontSize: 12),
                     ),
                     const SizedBox(height: 6),
                     Container(
-                      padding: const EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF141414),
+                        color: const Color(0xFF121212),
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(color: Colors.white10),
                       ),
                       child: SelectableText(
-                        cmdCommand,
-                        style: const TextStyle(color: Color(0xFF00FF00), fontFamily: "monospace", fontSize: 11),
+                        curlCommand,
+                        style: const TextStyle(color: Color(0xFF00FF00), fontFamily: "monospace", fontSize: 12),
                       ),
                     ),
                   ],
@@ -1648,18 +1672,17 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                   onPressed: () {
                     _stopHttpServer();
                     setStateModal(() {});
-                    Navigator.pop(context);
                   },
-                  child: Text(tr('stop_server'), style: const TextStyle(color: Colors.redAccent)),
+                  child: Text(tr('stop_server'), style: const TextStyle(color: Colors.redAccent, fontFamily: "monospace")),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFF0000),
                     foregroundColor: Colors.black,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                   ),
                   onPressed: () => Navigator.pop(context),
-                  child: const Text("OK", style: TextStyle(fontWeight: FontWeight.bold)),
+                  child: Text(tr('close'), style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace")),
                 ),
               ],
             );
