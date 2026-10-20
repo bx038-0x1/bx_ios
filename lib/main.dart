@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,7 +39,7 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Ajout du système multilingue.\n- Console adaptative et popup de récupération .bat.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Support de multiples ports de connexion (80, 443, 2222, etc.).\n- Scanner de ports réseau local intégré.\n- Auto-scroll console et options rapides .bat.',
+      'v4_desc': '- Support de multiples ports de connexion (80, 443, 2222, etc.).\n- Défilement automatique des logs vers le bas.\n- Sélection dynamique du sujet de contact.',
       'retrieval_title': 'Comment recuperer le fichier ?',
       'retrieval_content': 'Voici des sites gratuits sans inscription pour partager et recuperer votre script .bat sur Windows :\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Étape 1 : creer un dossier securisé',
@@ -48,7 +47,7 @@ class AppTranslations {
       'step2_win': 'Étape 2 : autorisations du dossier',
       'step2_win_desc': 'Faites un clic droit sur votre dossier créé -> Propriétés -> Sécurité.\n\nVérifiez que votre session utilisateur possède le contrôle total sur ce dossier afin d\'exécuter des fichiers sans contraintes.',
       'step3_win': 'Étape 3 : deploiement du script .bat',
-      'step3_win_desc': '1. Copiez le script .bat depuis l\'application.\n2. Dans votre dossier sécurisé, créez un document texte nommé \'serveur.bat\'.\n3. Collez le code dedans et sauvegardez.\n4. Double-cliquez pour exécuter l\'écouteur sur le port choisi.',
+      'step3_win_desc': '1. Copiez le script .bat depuis l\'application.\n2. Dans votre dossier sécurisé, créez un document texte nommé \'serveur.bat\'.\n3. Collez le code dedans et sauvegardez.\n4. Double-cliquez pour exécuter l\'écouteur sur le port 55555.',
       'step4_win': 'Étape 4 : recuperer l adresse ip locale',
       'step4_win_desc': 'Ouvrez l\'invite de commande (cmd) sur votre PC, tapez \'ipconfig\' et repérez la ligne \'Adresse IPv4\' (ex: 192.168.1.35).\n\nEnterez cette IP et le port dans l\'application pour initier la liaison.',
       'step1_mac': 'Étape 1 : configurer un repertoire isole',
@@ -80,12 +79,6 @@ class AppTranslations {
       'privacy_accept': 'J\'accepte',
       'privacy_refuse': 'Quitter',
       'select_port': 'Choisir un port rapide',
-      'scanner_btn': 'scanner',
-      'scanner_title': 'Scan de ports réseau local',
-      'scanner_start': 'Démarrer le scan',
-      'scanner_scanning': 'Analyse en cours...',
-      'port_available': 'Disponible / Ouvert',
-      'port_blocked': 'Bloqué / Fermé',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -115,7 +108,7 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Added multilingual system.\n- Adaptive console and .bat retrieval popup.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Support for multiple connection ports.\n- Integrated local network port scanner.\n- Auto-scroll console & quick .bat options.',
+      'v4_desc': '- Support for multiple connection ports.\n- Automatic log scrolling.\n- Subject-based contact system.',
       'retrieval_title': 'How to retrieve file?',
       'retrieval_content': 'Here are free no-login sites to share and retrieve your .bat script on Windows:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Step 1: create a secure folder',
@@ -123,7 +116,7 @@ class AppTranslations {
       'step2_win': 'Step 2: folder permissions',
       'step2_win_desc': 'Right click folder -> Properties -> Security.\n\nEnsure your user session has full control.',
       'step3_win': 'Step 3: deploy .bat script',
-      'step3_win_desc': '1. Copy bat script.\n2. Create server.bat in your secure folder.\n3. Paste code and save.\n4. Double click to run listener on port.',
+      'step3_win_desc': '1. Copy bat script.\n2. Create server.bat in your secure folder.\n3. Paste code and save.\n4. Double click to run listener on port 55555.',
       'step4_win': 'Step 4: retrieve local IP',
       'step4_win_desc': 'Open cmd, type \'ipconfig\' and find IPv4 Address (e.g. 192.168.1.35).\n\nEnter this IP and port.',
       'step1_mac': 'Step 1: isolated directory',
@@ -155,12 +148,6 @@ class AppTranslations {
       'privacy_accept': 'I Accept',
       'privacy_refuse': 'Exit',
       'select_port': 'Select quick port',
-      'scanner_btn': 'scanner',
-      'scanner_title': 'Local Port Scanner',
-      'scanner_start': 'Start Scanner',
-      'scanner_scanning': 'Scanning...',
-      'port_available': 'Available / Open',
-      'port_blocked': 'Blocked / Closed',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -190,7 +177,7 @@ class AppTranslations {
       'v3_title': 'Versión 1.0.2 / News',
       'v3_desc': '- Sistema multilingüe añadido.\n- Consola adaptativa y popup de recuperación .bat.',
       'v4_title': 'Versión 1.0.3 / News',
-      'v4_desc': '- Escáner de puertos de red local.\n- Desplazamiento automático de registros.',
+      'v4_desc': '- Desplazamiento automático de registros.\n- Soporte para múltiples puertos.',
       'retrieval_title': '¿Cómo recuperar archivo?',
       'retrieval_content': 'Sitios gratuitos sin registro:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Paso 1: carpeta segura',
@@ -230,12 +217,6 @@ class AppTranslations {
       'privacy_accept': 'Acepto',
       'privacy_refuse': 'Salir',
       'select_port': 'Seleccionar puerto rápido',
-      'scanner_btn': 'escanear',
-      'scanner_title': 'Escáner de puertos de red local',
-      'scanner_start': 'Iniciar escaneo',
-      'scanner_scanning': 'Escaneando...',
-      'port_available': 'Disponible / Abierto',
-      'port_blocked': 'Bloqueado / Cerrado',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -265,7 +246,7 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Mehrsprachiges System hinzugefügt.\n- Adaptive Konsole und .bat-Abruf-Popup.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Lokaler Netzwerk-Portscanner.\n- Automatisches Scrollen im Log.',
+      'v4_desc': '- Automatisches Scrollen im Log.\n- Unterstützung für mehrere Ports.',
       'retrieval_title': 'Datei abrufen?',
       'retrieval_content': 'Kostenlose Dienste:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Schritt 1: Ordner',
@@ -305,12 +286,6 @@ class AppTranslations {
       'privacy_accept': 'Akzeptieren',
       'privacy_refuse': 'Beenden',
       'select_port': 'Schnellport auswählen',
-      'scanner_btn': 'scannen',
-      'scanner_title': 'Lokaler Port-Scanner',
-      'scanner_start': 'Scannen starten',
-      'scanner_scanning': 'Scannen...',
-      'port_available': 'Verfügbar / Offen',
-      'port_blocked': 'Blockiert / Geschlossen',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -340,7 +315,7 @@ class AppTranslations {
       'v3_title': 'Versão 1.0.2 / News',
       'v3_desc': '- Adicionado sistema multilíngue.\n- Console adaptativa e popup de recuperação .bat.',
       'v4_title': 'Versão 1.0.3 / News',
-      'v4_desc': '- Scanner de portas de rede local.\n- Rolagem automática dos logs.',
+      'v4_desc': '- Rolagem automática dos logs.\n- Suporte para múltiplas portas.',
       'retrieval_title': 'Como recuperar arquivo?',
       'retrieval_content': 'Sites gratuitos:\n\n- https://paste.ee\n- https://0x0.st\n- https://file.io\n- https://gist.github.com\n- https://pastebin.com',
       'step1_win': 'Passo 1: Pasta',
@@ -380,12 +355,6 @@ class AppTranslations {
       'privacy_accept': 'Aceitar',
       'privacy_refuse': 'Sair',
       'select_port': 'Selecionar porta rápida',
-      'scanner_btn': 'escanear',
-      'scanner_title': 'Scanner de Portas Local',
-      'scanner_start': 'Iniciar escaneamento',
-      'scanner_scanning': 'Escaneando...',
-      'port_available': 'Disponível / Aberto',
-      'port_blocked': 'Bloqueado / Fechado',
     }
   };
 
@@ -798,18 +767,6 @@ pause''';
     );
   }
 
-  void _navigateToScanner() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => PortScannerScreen(
-          targetIp: _ipController.text.trim(),
-          currentLang: widget.currentLang,
-        ),
-      ),
-    );
-  }
-
   void _toggleConnection() async {
     if (_isConnected) {
       _disconnect();
@@ -918,11 +875,6 @@ pause''';
         backgroundColor: const Color(0xFF000000),
         elevation: 0,
         actions: [
-          IconButton(
-            icon: const Icon(Icons.radar, color: Color(0xFFFF0000), size: 20),
-            onPressed: _navigateToScanner,
-            tooltip: tr('scanner_btn'),
-          ),
           IconButton(
             icon: const Icon(Icons.mail_outline, color: Color(0xFFFF0000), size: 20),
             onPressed: _showContactPopup,
@@ -1370,7 +1322,6 @@ class BatScriptScreen extends StatefulWidget {
 
 class _BatScriptScreenState extends State<BatScriptScreen> {
   late TextEditingController _scriptController;
-  int _selectedPort = 55555;
 
   @override
   void initState() {
@@ -1385,17 +1336,6 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
   }
 
   String tr(String key) => AppTranslations.get(key, widget.currentLang);
-
-  void _updateScriptPort(int port) {
-    setState(() {
-      _selectedPort = port;
-      _scriptController.text = '''@echo off
-title serveur local
-echo lancement du serveur sur le port $port...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "\$listener = [System.Net.Sockets.TcpListener]$port; \$listener.Start(); while (\$true) { \$client = \$listener.AcceptTcpClient(); \$stream = \$client.GetStream(); \$reader = New-Object System.IO.StreamReader(\$stream); \$writer = New-Object System.IO.StreamWriter(\$stream); \$writer.AutoFlush = \$true; \$writer.WriteLine('connecter au windows'); while (\$client.Connected) { \$cmd = \$reader.ReadLine(); if (\$cmd -eq \$null) { break }; try { \$out = Invoke-Expression \$cmd 2>&1 | Out-String; if ([string]::IsNullOrWhiteSpace(\$out)) { \$out = 'commande executer sans retour.' }; \$writer.WriteLine(\$out); } catch { \$writer.WriteLine('erreur: ' + \$_.Exception.Message); } } \$client.Close(); }"
-pause''';
-    });
-  }
 
   void _showRetrievalDialog(BuildContext context) {
     showDialog(
@@ -1430,8 +1370,6 @@ pause''';
 
   @override
   Widget build(BuildContext context) {
-    final List<int> compatiblePorts = [55555, 80, 443, 2222, 8080];
-
     return Scaffold(
       backgroundColor: const Color(0xFF000000),
       appBar: AppBar(
@@ -1454,28 +1392,6 @@ pause''';
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            SizedBox(
-              height: 40,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: compatiblePorts.length,
-                itemBuilder: (context, index) {
-                  final port = compatiblePorts[index];
-                  final isSelected = port == _selectedPort;
-                  return Container(
-                    margin: const EdgeInsets.only(right: 8),
-                    child: ChoiceChip(
-                      label: Text("Port $port", style: TextStyle(color: isSelected ? Colors.black : Colors.white, fontSize: 12)),
-                      selected: isSelected,
-                      selectedColor: const Color(0xFFFF0000),
-                      backgroundColor: const Color(0xFF0A0A0A),
-                      onSelected: (_) => _updateScriptPort(port),
-                    ),
-                  );
-                },
-              ),
-            ),
-            const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.only(bottom: 12.0),
               child: SizedBox(
@@ -1527,178 +1443,9 @@ pause''';
                 ),
                 onPressed: () {
                   Clipboard.setData(ClipboardData(text: _scriptController.text));
-                  Navigator.pop(context, "script .bat (port $_selectedPort) copié.");
+                  Navigator.pop(context, "script .bat copié.");
                 },
                 child: Text(tr('copy_script'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class PortScannerScreen extends StatefulWidget {
-  final String targetIp;
-  final String currentLang;
-
-  const PortScannerScreen({
-    super.key,
-    required this.targetIp,
-    required this.currentLang,
-  });
-
-  @override
-  State<PortScannerScreen> createState() => _PortScannerScreenState();
-}
-
-class _PortScannerScreenState extends State<PortScannerScreen> {
-  final List<int> _targetPorts = [80, 443, 2222, 8080, 55555];
-  final Map<int, bool> _scanResults = {};
-  bool _isScanning = false;
-  double _progress = 0.0;
-
-  String tr(String key) => AppTranslations.get(key, widget.currentLang);
-
-  void _startScan() async {
-    if (_isScanning) return;
-    setState(() {
-      _isScanning = true;
-      _progress = 0.0;
-      _scanResults.clear();
-    });
-
-    for (int i = 0; i < _targetPorts.length; i++) {
-      final port = _targetPorts[i];
-      try {
-        final socket = await Socket.connect(
-          widget.targetIp,
-          port,
-          timeout: const Duration(milliseconds: 800),
-        );
-        socket.destroy();
-        _scanResults[port] = true;
-      } catch (_) {
-        _scanResults[port] = false;
-      }
-
-      if (mounted) {
-        setState(() {
-          _progress = (i + 1) / _targetPorts.length;
-        });
-      }
-    }
-
-    if (mounted) {
-      setState(() {
-        _isScanning = false;
-      });
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF000000),
-      appBar: AppBar(
-        title: Text(tr('scanner_title'), style: const TextStyle(fontSize: 16, fontFamily: "monospace")),
-        backgroundColor: const Color(0xFF000000),
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFFFF0000)),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAlignment.start,
-          children: [
-            Text(
-              "${tr('target_ip')} : ${widget.targetIp}",
-              style: const TextStyle(color: Colors.white, fontSize: 14, fontFamily: "monospace"),
-            ),
-            const SizedBox(height: 16),
-            if (_isScanning) ...[
-              LinearProgressIndicator(
-                value: _progress,
-                backgroundColor: Colors.white10,
-                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFF0000)),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                "${tr('scanner_scanning')} (${(_progress * 100).toInt()}%)",
-                style: const TextStyle(color: Colors.white54, fontSize: 12, fontFamily: "monospace"),
-              ),
-              const SizedBox(height: 16),
-            ],
-            Expanded(
-              child: ListView.builder(
-                itemCount: _targetPorts.length,
-                itemBuilder: (context, index) {
-                  final port = _targetPorts[index];
-                  final bool? isOpen = _scanResults[port];
-
-                  return Container(
-                    margin: const EdgeInsets.symmetric(vertical: 4),
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF050505),
-                      borderRadius: BorderRadius.circular(4),
-                      border: Border.all(color: Colors.white10),
-                    ),
-                    child: Row(
-                      children: [
-                        Icon(
-                          isOpen == null
-                              ? Icons.hourglass_empty
-                              : (isOpen ? Icons.check_circle : Icons.cancel),
-                          color: isOpen == null
-                              ? Colors.white24
-                              : (isOpen ? Colors.green : Colors.red),
-                          size: 20,
-                        ),
-                        const SizedBox(width: 12),
-                        Text(
-                          "Port $port",
-                          style: const TextStyle(color: Colors.white, fontSize: 14, fontFamily: "monospace"),
-                        ),
-                        const Spacer(),
-                        Text(
-                          isOpen == null
-                              ? "-"
-                              : (isOpen ? tr('port_available') : tr('port_blocked')),
-                          style: TextStyle(
-                            color: isOpen == null
-                                ? Colors.white24
-                                : (isOpen ? Colors.green : Colors.red),
-                            fontSize: 12,
-                            fontFamily: "monospace",
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              width: double.infinity,
-              height: 48,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFF0000),
-                  foregroundColor: Colors.black,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-                ),
-                onPressed: _isScanning ? null : _startScan,
-                child: Text(
-                  _isScanning ? tr('scanner_scanning') : tr('scanner_start'),
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                ),
               ),
             ),
           ],
