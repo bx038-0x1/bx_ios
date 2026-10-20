@@ -776,11 +776,11 @@ pause''';
                 dropdownColor: const Color(0xFF111111),
                 icon: const Icon(Icons.language, color: Color(0xFFFF0000), size: 18),
                 items: const [
-                  DropdownMenuItem(value: 'fr', child: Text('FR', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'en', child: Text('EN', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'es', child: Text('ES', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'de', child: Text('DE', style: TextStyle(color: Colors.white, fontSize: 12))),
-                  DropdownMenuItem(value: 'pt', child: Text('PT', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'fr', child: Text('🇫🇷FR', style: TextStyle(color: Colors.blue, fontSize: 12))),
+                  DropdownMenuItem(value: 'en', child: Text('🇺🇸EN', style: TextStyle(color: Colors.white, fontSize: 12))),
+                  DropdownMenuItem(value: 'es', child: Text('🇪🇸ES', style: TextStyle(color: Colors.yellow, fontSize: 12))),
+                  DropdownMenuItem(value: 'de', child: Text('🇩🇪DE', style: TextStyle(color: Colors.red, fontSize: 12))),
+                  DropdownMenuItem(value: 'pt', child: Text('🇵🇹PT', style: TextStyle(color: Colors.green, fontSize: 12))),
                 ],
                 onChanged: (val) {
                   if (val != null) widget.onLangChanged(val);
