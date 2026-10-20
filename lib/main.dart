@@ -40,7 +40,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Support de multiples ports de connexion.\n- Sélection dynamique du sujet de message.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Serveur HTTP intégré avec design pro et indicateur de chargement circulaire.\n- Commande curl optimisée.',
+      'v5_desc': '- Gestion des permissions réseau/Wi-Fi.\n- Détection automatique du téléchargement du script et notification animée.',
       'step1_win': 'Étape 1 : creer un dossier securisé',
       'step1_win_desc': 'Pour éviter que Windows Defender ou votre pare-feu bloque l\'application, évitez le dossier /Downloads.\n\nCréez un dossier neuf à la racine de votre système, par exemple : C:\\BXRemote.',
       'step2_win': 'Étape 2 : autorisations du dossier',
@@ -95,6 +95,12 @@ class AppTranslations {
       'cmd_to_run': 'Commande Windows (CMD / PowerShell) :',
       'stop_server': 'Arrêter',
       'close': 'Fermer',
+      'perm_dialog_title': 'Permissions requises',
+      'perm_dialog_content': 'BX Remote a besoin des accès au réseau local et au Wi-Fi pour communiquer avec vos machines.',
+      'perm_accept': 'Autoriser',
+      'perm_refuse': 'Refuser',
+      'perm_request_btn': 'Autoriser le réseau et le WiFi',
+      'file_downloaded_toast': 'Fichier récupéré :D',
     },
     'en': {
       'app_title': 'BX Remote',
@@ -123,9 +129,9 @@ class AppTranslations {
       'v3_title': 'Version 1.0.2 / News',
       'v3_desc': '- Added multilingual system.\n- Adaptive console.',
       'v4_title': 'Version 1.0.3 / News',
-      'v4_desc': '- Support for multiple connection ports.\n- Subject-based contact system.',
+      'v4_desc': '- Support for multiple ports.\n- Subject-based contact system.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Integrated HTTP server with professional UI and circular progress indicator.\n- Optimized curl command.',
+      'v5_desc': '- Network/Wi-Fi permission handling.\n- Automatic script download detection and animated notification.',
       'step1_win': 'Step 1: create a secure folder',
       'step1_win_desc': 'To avoid Windows Defender or firewall blocking, avoid the /Downloads folder.\n\nCreate a new folder at system root, e.g., C:\\BXRemote.',
       'step2_win': 'Step 2: folder permissions',
@@ -180,6 +186,12 @@ class AppTranslations {
       'cmd_to_run': 'Windows Command (CMD / PowerShell):',
       'stop_server': 'Stop',
       'close': 'Close',
+      'perm_dialog_title': 'Required Permissions',
+      'perm_dialog_content': 'BX Remote requires local network and Wi-Fi access to communicate with your machines.',
+      'perm_accept': 'Allow',
+      'perm_refuse': 'Deny',
+      'perm_request_btn': 'Allow Network & Wi-Fi',
+      'file_downloaded_toast': 'File retrieved :D',
     },
     'es': {
       'app_title': 'BX Remote',
@@ -210,7 +222,7 @@ class AppTranslations {
       'v4_title': 'Versión 1.0.3 / News',
       'v4_desc': '- Soporte para múltiples puertos.',
       'v5_title': 'Versión 1.0.4 / News',
-      'v5_desc': '- Servidor HTTP integrado con interfaz profesional e indicador circular.',
+      'v5_desc': '- Gestión de permisos de red y Wi-Fi.',
       'step1_win': 'Paso 1: carpeta segura',
       'step1_win_desc': 'Evite /Downloads. Cree C:\\BXRemote.',
       'step2_win': 'Paso 2: permisos',
@@ -265,6 +277,12 @@ class AppTranslations {
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
       'stop_server': 'Detener',
       'close': 'Cerrar',
+      'perm_dialog_title': 'Permisos requeridos',
+      'perm_dialog_content': 'BX Remote necesita acceso a la red local y Wi-Fi para comunicarse.',
+      'perm_accept': 'Permitir',
+      'perm_refuse': 'Denegar',
+      'perm_request_btn': 'Permitir red y Wi-Fi',
+      'file_downloaded_toast': '¡Archivo recuperado :D',
     },
     'de': {
       'app_title': 'BX Remote',
@@ -295,7 +313,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Unterstützung für mehrere Ports.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Integrierter HTTP-Server mit professioneller UI und Kreisfortschrittsanzeige.',
+      'v5_desc': '- Netzwerk- und WLAN-Berechtigungen.',
       'step1_win': 'Schritt 1: Ordner',
       'step1_win_desc': 'C:\\BXRemote erstellen.',
       'step2_win': 'Schritt 2: Rechte',
@@ -350,6 +368,12 @@ class AppTranslations {
       'cmd_to_run': 'Windows-Befehl (CMD / PowerShell):',
       'stop_server': 'Stoppen',
       'close': 'Schließen',
+      'perm_dialog_title': 'Erforderliche Berechtigungen',
+      'perm_dialog_content': 'BX Remote benötigt Netzwerk- und WLAN-Zugriff.',
+      'perm_accept': 'Erlauben',
+      'perm_refuse': 'Ablehnen',
+      'perm_request_btn': 'Netzwerk & WLAN erlauben',
+      'file_downloaded_toast': 'Datei empfangen :D',
     },
     'pt': {
       'app_title': 'BX Remote',
@@ -380,7 +404,7 @@ class AppTranslations {
       'v4_title': 'Version 1.0.3 / News',
       'v4_desc': '- Suporte para múltiplas portas.',
       'v5_title': 'Version 1.0.4 / News',
-      'v5_desc': '- Servidor HTTP integrado com interface profissional e indicador de progresso circular.',
+      'v5_desc': '- Gerenciamento de permissões de rede e Wi-Fi.',
       'step1_win': 'Passo 1: Pasta',
       'step1_win_desc': 'Criar C:\\BXRemote.',
       'step2_win': 'Passo 2: Permissões',
@@ -435,6 +459,12 @@ class AppTranslations {
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
       'stop_server': 'Parar',
       'close': 'Fechar',
+      'perm_dialog_title': 'Permissões necessárias',
+      'perm_dialog_content': 'BX Remote precisa de acesso à rede local e Wi-Fi.',
+      'perm_accept': 'Permitir',
+      'perm_refuse': 'Recusar',
+      'perm_request_btn': 'Permitir rede e Wi-Fi',
+      'file_downloaded_toast': 'Arquivo recuperado :D',
     }
   };
 
@@ -456,6 +486,11 @@ Future<bool> sendDiscordWebhook(String text) async {
   } catch (_) {
     return false;
   }
+}
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -517,6 +552,7 @@ class _RemoteControlScreenState extends State<RemoteControlScreen> with SingleTi
   bool _isConnected = false;
   bool _showLogs = true;
   bool _isTypingOrFocused = false;
+  bool _permissionsGranted = true;
   List<Map<String, dynamic>> logs = [];
 
   late AnimationController _animationController;
@@ -544,6 +580,7 @@ pause''';
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _checkPrivacyConsent();
+      _showPermissionDialogStartup();
     });
   }
 
@@ -554,6 +591,55 @@ pause''';
     if (!accepted && mounted) {
       _showPrivacyDialog();
     }
+  }
+
+  void _showPermissionDialogStartup() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFF0A0A0A),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: const BorderSide(color: Color(0xFFFF0000), width: 1.5),
+          ),
+          title: Text(
+            tr('perm_dialog_title'),
+            style: const TextStyle(color: Color(0xFFFF0000), fontSize: 16, fontFamily: "monospace", fontWeight: FontWeight.bold),
+          ),
+          content: Text(
+            tr('perm_dialog_content'),
+            style: const TextStyle(color: Colors.white70, fontSize: 13, height: 1.5, fontFamily: "monospace"),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  _permissionsGranted = false;
+                });
+                Navigator.pop(context);
+              },
+              child: Text(tr('perm_refuse'), style: const TextStyle(color: Colors.white38)),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFFF0000),
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              ),
+              onPressed: () {
+                setState(() {
+                  _permissionsGranted = true;
+                });
+                Navigator.pop(context);
+              },
+              child: Text(tr('perm_accept'), style: const TextStyle(fontWeight: FontWeight.bold)),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   void _showPrivacyDialog() {
@@ -1047,6 +1133,22 @@ pause''';
             children: [
               Column(
                 children: [
+                  if (!_permissionsGranted)
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFFF3333),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                        ),
+                        onPressed: _showPermissionDialogStartup,
+                        icon: const Icon(Icons.warning_amber_rounded, size: 18),
+                        label: Text(tr('perm_request_btn'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "monospace")),
+                      ),
+                    ),
                   Row(
                     children: [
                       Expanded(
@@ -1500,6 +1602,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
   HttpServer? _httpServer;
   bool _isServerRunning = false;
   List<String> _detectedIps = [];
+  bool _fileDownloaded = false;
 
   @override
   void initState() {
@@ -1535,11 +1638,25 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
     }
   }
 
-  Future<void> _startHttpServer() async {
+  Future<void> _startHttpServer(StateSetter setStateModal) async {
     if (_isServerRunning) return;
     try {
       _httpServer = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
       _httpServer!.listen((HttpRequest request) {
+        if (request.method == 'GET') {
+          if (mounted) {
+            setStateModal(() {
+              _fileDownloaded = true;
+            });
+            Future.delayed(const Duration(seconds: 3), () {
+              if (mounted) {
+                setStateModal(() {
+                  _fileDownloaded = false;
+                });
+              }
+            });
+          }
+        }
         request.response.headers.contentType = ContentType('text', 'plain', charset: 'utf-8');
         request.response.write(_scriptController.text);
         request.response.close();
@@ -1547,37 +1664,43 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
       setState(() {
         _isServerRunning = true;
       });
+      setStateModal(() {});
     } catch (e) {
       setState(() {
         _isServerRunning = false;
       });
+      setStateModal(() {});
     }
   }
 
-  void _stopHttpServer() {
+  void _stopHttpServer(StateSetter setStateModal) {
     _httpServer?.close();
     _httpServer = null;
     if (mounted) {
       setState(() {
         _isServerRunning = false;
       });
+      setStateModal(() {});
     }
   }
 
   void _showHostingDialog(BuildContext context) async {
     await _detectNetworkIps();
-    await _startHttpServer();
 
     if (!mounted) return;
-
-    final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
-    final curlCommand = "curl -O http://$primaryIp:8080/server.bat";
 
     showDialog(
       context: context,
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setStateModal) {
+            if (!_isServerRunning && _httpServer == null) {
+              _startHttpServer(setStateModal);
+            }
+
+            final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
+            final curlCommand = "curl -O http://$primaryIp:8080/server.bat";
+
             return AlertDialog(
               backgroundColor: const Color(0xFF090909),
               shape: RoundedRectangleBorder(
@@ -1599,6 +1722,27 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    if (_fileDownloaded)
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        margin: const EdgeInsets.only(bottom: 16),
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: Colors.green, width: 1),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.check_circle, color: Colors.green, size: 20),
+                            const SizedBox(width: 10),
+                            Text(
+                              tr('file_downloaded_toast'),
+                              style: const TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.bold, fontFamily: "monospace", fontSize: 13),
+                            ),
+                          ],
+                        ),
+                      ),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                       decoration: BoxDecoration(
@@ -1670,8 +1814,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
               actions: [
                 TextButton(
                   onPressed: () {
-                    _stopHttpServer();
-                    setStateModal(() {});
+                    _stopHttpServer(setStateModal);
                   },
                   child: Text(tr('stop_server'), style: const TextStyle(color: Colors.redAccent, fontFamily: "monospace")),
                 ),
@@ -1681,7 +1824,10 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
                     foregroundColor: Colors.black,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                   ),
-                  onPressed: () => Navigator.pop(context),
+                  onPressed: () {
+                    _stopHttpServer(setStateModal);
+                    Navigator.pop(context);
+                  },
                   child: Text(tr('close'), style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace")),
                 ),
               ],
