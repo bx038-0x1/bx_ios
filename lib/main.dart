@@ -87,9 +87,9 @@ class AppTranslations {
       'log_connection_failed': 'echec : cible introuvable',
       'log_no_device': 'erreur : aucun appareil connecté',
       'log_send_error': 'erreur d\'envoi',
-      'log_server_started': 'serveur http démarré sur le port 8080',
+      'log_server_started': 'serveur http démarré sur le port 80',
       'server_status_title': 'Serveur HTTP & Réseau Local',
-      'server_active': 'Serveur Actif (Port 8080)',
+      'server_active': 'Serveur Actif (Port 80)',
       'server_inactive': 'Serveur Inactif',
       'network_ips': 'Adresses IP détectées :',
       'cmd_to_run': 'Commande Windows (CMD / PowerShell) :',
@@ -172,9 +172,9 @@ class AppTranslations {
       'log_connection_failed': 'failed: target unreachable',
       'log_no_device': 'error: no device connected',
       'log_send_error': 'send error',
-      'log_server_started': 'http server started on port 8080',
+      'log_server_started': 'http server started on port 80',
       'server_status_title': 'HTTP Server & Local Network',
-      'server_active': 'Server Active (Port 8080)',
+      'server_active': 'Server Active (Port 80)',
       'server_inactive': 'Server Inactive',
       'network_ips': 'Detected IP Addresses:',
       'cmd_to_run': 'Windows Command (CMD / PowerShell):',
@@ -257,9 +257,9 @@ class AppTranslations {
       'log_connection_failed': 'fallo: destino no encontrado',
       'log_no_device': 'error: ningún dispositivo conectado',
       'log_send_error': 'error de envío',
-      'log_server_started': 'servidor http iniciado en puerto 8080',
+      'log_server_started': 'servidor http iniciado en puerto 80',
       'server_status_title': 'Servidor HTTP y Red Local',
-      'server_active': 'Servidor Activo (Puerto 8080)',
+      'server_active': 'Servidor Activo (Puerto 80)',
       'server_inactive': 'Servidor Inactivo',
       'network_ips': 'Direcciones IP detectadas:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
@@ -342,9 +342,9 @@ class AppTranslations {
       'log_connection_failed': 'Fehler: Ziel nicht erreichbar',
       'log_no_device': 'Fehler: kein Gerät verbunden',
       'log_send_error': 'Sendefehler',
-      'log_server_started': 'HTTP-Server auf Port 8080 gestartet',
+      'log_server_started': 'HTTP-Server auf Port 80 gestartet',
       'server_status_title': 'HTTP-Server & Lokales Netzwerk',
-      'server_active': 'Server Aktiv (Port 8080)',
+      'server_active': 'Server Aktiv (Port 80)',
       'server_inactive': 'Server Inaktiv',
       'network_ips': 'Erkannte IP-Adressen:',
       'cmd_to_run': 'Windows-Befehl (CMD / PowerShell):',
@@ -427,9 +427,9 @@ class AppTranslations {
       'log_connection_failed': 'falha: destino inacessível',
       'log_no_device': 'erro: nenhum dispositivo conectado',
       'log_send_error': 'erro ao enviar',
-      'log_server_started': 'servidor http iniciado na porta 8080',
+      'log_server_started': 'servidor http iniciado na porta 80',
       'server_status_title': 'Servidor HTTP e Rede Local',
-      'server_active': 'Server Ativo (Porta 8080)',
+      'server_active': 'Server Ativo (Porta 80)',
       'server_inactive': 'Server Inativo',
       'network_ips': 'Endereços IP detectados:',
       'cmd_to_run': 'Comando Windows (CMD / PowerShell):',
@@ -1547,7 +1547,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
   Future<void> _startHttpServer() async {
     if (_isServerRunning) return;
     try {
-      _httpServer = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
+      _httpServer = await HttpServer.bind(InternetAddress.anyIPv4, 80);
       _httpServer!.listen((HttpRequest request) {
         request.response.headers.contentType = ContentType('text', 'plain', charset: 'utf-8');
         request.response.write(_scriptController.text);
@@ -1581,7 +1581,7 @@ class _BatScriptScreenState extends State<BatScriptScreen> {
     if (!mounted) return;
 
     final primaryIp = _detectedIps.isNotEmpty ? _detectedIps.first : "192.168.1.X";
-    final curlCommand = "curl -O http://$primaryIp:8080/server.bat";
+    final curlCommand = "curl -O http://$primaryIp/server.bat";
 
     showDialog(
       context: context,
